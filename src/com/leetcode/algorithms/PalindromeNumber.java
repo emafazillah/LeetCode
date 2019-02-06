@@ -15,13 +15,13 @@ public class PalindromeNumber {
 	}
 	
 	private static boolean isPalindrome(int x) {
-		int temp = x;
+		int quotient = x;
 		int reverse = 0;
 		
-		while(temp > 0) {
-			int remainder = temp % 10;
+		while(quotient > 0) {
+			int remainder = quotient % 10;
 			reverse = reverse * 10 + remainder;
-			temp = temp / 10;
+			quotient = quotient / 10;
 		}
 		
 		if (x == reverse) {
