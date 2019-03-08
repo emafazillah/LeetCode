@@ -1,6 +1,5 @@
 package com.leetcode.algorithms;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class FlippingAnImage {
