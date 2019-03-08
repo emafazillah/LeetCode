@@ -6,6 +6,7 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
 
+// LATER
 public class AvailableCapturesForRook {
 	
 	public static void main(String...strings) {
