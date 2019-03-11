@@ -40,61 +40,58 @@ public class FindCommonCharacters {
 	}
 	
 	public static List<String> commonChars(String[] A) {
-		// Map for result
-		Map<Character, Integer> mapResult = new HashMap<>();
-		
-		// Compare Map value
-		Map<Character, Integer> mapCharA0 = new HashMap<>();
+		// Reference Map, A[0]
 		char[] charA0 = A[0].toCharArray();
-		for(char c : charA0) {
-			int count = 1;
-			if(mapCharA0.containsKey(c)) {
-				count = mapCharA0.get(c);
-				++count;
-				mapCharA0.remove(c);
-			}
-			mapCharA0.put(c, count);
-		}
+		Map<Character, Integer> mapCharA0 = mapping(charA0);
 		
 		for(int i = 1; i < A.length; i++) {
 			// A[i]
-			Map<Character, Integer> mapCharAi = new HashMap<>();
 			char[] charAi = A[i].toCharArray();
-			for(char c : charAi) {
-				int countI = 1;
-				if(mapCharAi.containsKey(c)) {
-					countI = mapCharAi.get(c);
-					++countI;
-					mapCharAi.remove(c);
-				}
-				mapCharAi.put(c, countI);
-			}
+			Map<Character, Integer> mapCharAi = mapping(charAi);
 			
-			// Compare
-			for(Map.Entry<Character, Integer> mapAi : mapCharAi.entrySet()) {
-				char key = mapAi.getKey();
-				int value = mapAi.getValue();
-				if(mapCharA0.containsKey(key) && mapCharA0.get(key) == value) {
-					int count0 = 1;
-					if(mapResult.containsKey(key)) {
-						count0 = mapResult.get(key);
-						++count0;
-						mapResult.remove(key);
+			// Compare with reference Map
+			for(Map.Entry<Character, Integer> mapA0 : mapCharA0.entrySet()) {
+				char key = mapA0.getKey();
+				int value = mapA0.getValue();
+				if(mapCharAi.containsKey(key)) {
+					// Update value of key of reference Map if value of key of current Map is less than reference Map
+					// Do nothing if value of key of reference Map equal or greater than current Map
+					if(value > mapCharAi.get(key)) {
+						mapCharA0.put(key, mapCharAi.get(key));
 					}
-					mapResult.put(key, count0);
+				} else {
+					// Update value of key of reference Map with 0
+					mapCharA0.put(key, 0);
 				}
 			}
 		}
 		
 		// Output
 		List<String> result = new ArrayList<>();
-		for(char c : charA0) {
-			if(mapResult.containsKey(c) && mapResult.get(c) == A.length - 1) {
-				result.add(Character.toString(c));
+		for(Map.Entry<Character, Integer> map : mapCharA0.entrySet()) {
+			char key = map.getKey();
+			int value = map.getValue();
+			for(int i = 0; i < value; i++) {
+				result.add(Character.toString(key));
 			}
 		}
 		
 		return result;
     }
+	
+	private static Map<Character, Integer> mapping(char[] chars) {
+		Map<Character, Integer> mapResult = new HashMap<>();
+		for(char c : chars) {
+			int count = 1;
+			if(mapResult.containsKey(c)) {
+				count = mapResult.get(c);
+				++count;
+				mapResult.remove(c);
+			}
+			mapResult.put(c, count);
+		}
+		
+		return mapResult;
+	}
 
 }
