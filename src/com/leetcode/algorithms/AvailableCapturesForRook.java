@@ -1,8 +1,8 @@
 package com.leetcode.algorithms;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.TreeMap;
 
 public class AvailableCapturesForRook {
 	
@@ -25,77 +25,92 @@ public class AvailableCapturesForRook {
 	}
 	
 	public static int numRookCaptures(char[][] board) {
-		String xAxisRook = ""; // j
-        String yAxisRook = ""; // i
-		
-		// location, chess pieces
-		Map<String, String> chessPieces = new HashMap<>();
-		
+		// Get Rook location
+		int xAxisRook = 0; // j
+        int yAxisRook = 0; // i
+        boolean isRook = false;
+        
+		for(int i = 0; i < board.length; i++) {
+        	for(int j = 0; j < board[i].length; j++) {
+        		String chessPiece = Character.toString(board[i][j]);
+        		if("R".equals(chessPiece)) {
+        			xAxisRook = j;
+                	yAxisRook = i;
+                	isRook = true;
+                	break;
+        		}
+        	}
+        	
+        	if(isRook) {
+        		break;
+        	}
+        }
+        
+        // Get Rook captures distance
+		TreeMap<Integer, String> mapXPositive = new TreeMap<>();
+		TreeMap<Integer, String> mapXNegative = new TreeMap<>();
+        TreeMap<Integer, String> mapYPositive = new TreeMap<>();
+        TreeMap<Integer, String> mapYNegative = new TreeMap<>();
+        
         for(int i = 0; i < board.length; i++) {
         	for(int j = 0; j < board[i].length; j++) {
-        		String key = Integer.toString(j) + Integer.toString(i);
-        		String value = Character.toString(board[i][j]);
-        		
-        		if(!".".equals(value)) {
-        			if("R".equals(value)) {
-            			xAxisRook = Integer.toString(j);
-                    	yAxisRook = Integer.toString(i);
-            		} else {
-            			chessPieces.put(key, value);
-            		}
+        		String chessPiece = Character.toString(board[i][j]);
+        		if(!".".equals(chessPiece) && !"R".equals(chessPiece)) {
+        			int x = j;
+        			int y = i;
+        			int distance = 0;
+        			if(x == xAxisRook) {
+        				distance = Math.abs(y - yAxisRook);
+        				if(yAxisRook > y) {
+        					mapXNegative.put(distance, chessPiece);
+        				} else {
+        					mapXPositive.put(distance, chessPiece);
+        				}
+        			} else if(y == yAxisRook) {
+        				distance = Math.abs(x - xAxisRook);
+        				if(xAxisRook > x) {
+        					mapYNegative.put(distance, chessPiece);
+        				} else {
+        					mapYPositive.put(distance, chessPiece);
+        				}
+        			}
         		}
         	}
         }
         
+        // Count Rook captures
         int result = 0;
         
-        int diff = 0;
-        
-        for(Map.Entry<String, String> chessPiece : chessPieces.entrySet()) {
-        	String coordinate = chessPiece.getKey();
-        	String x = coordinate.substring(0, 1);
-        	String y = coordinate.substring(1, 2);
-        	String piece = chessPiece.getValue();
-        	
-        	int currentDiff = 0;
-        	
-        	if(xAxisRook.equals(x)) {
-        		if(diff == 0) {
-					diff = Math.abs(Integer.parseInt(y) - Integer.parseInt(yAxisRook));
-				}
-        		currentDiff = Math.abs(Integer.parseInt(y) - Integer.parseInt(yAxisRook));
+        // x-axis
+        for(Map.Entry<Integer, String> map : mapXPositive.entrySet()) {
+        	if("p".equals(map.getValue())) {
+        		++result;
         	}
-        	
-        	if(yAxisRook.equals(y)) {
-        		if(diff == 0) {
-					diff = Math.abs(Integer.parseInt(x) - Integer.parseInt(xAxisRook));
-				}
-        		currentDiff = Math.abs(Integer.parseInt(x) - Integer.parseInt(xAxisRook));
-        	}
-        	
-        	if(xAxisRook.equals(x) && (Integer.parseInt(y) > Integer.parseInt(yAxisRook)) && (currentDiff <= diff)) {
-				if("p".equals(piece)) {
-					++result;
-				}
-				diff = currentDiff;
-			} else if(xAxisRook.equals(x) && (Integer.parseInt(y) < Integer.parseInt(yAxisRook)) && (currentDiff <= diff)) {
-				if("p".equals(piece)) {
-					++result;
-				}
-				diff = currentDiff;
-			} else if(yAxisRook.equals(y) && (Integer.parseInt(x) > Integer.parseInt(xAxisRook)) && (currentDiff <= diff)) {
-				if("p".equals(piece)) {
-					++result;
-				}
-				diff = currentDiff;
-			} else if(yAxisRook.equals(y) && (Integer.parseInt(x) < Integer.parseInt(xAxisRook)) && (currentDiff <= diff)) {
-				if("p".equals(piece)) {
-					++result;
-				}
-				diff = currentDiff;
-			}
+        	break;
         }
-		
+        
+        for(Map.Entry<Integer, String> map : mapXNegative.entrySet()) {
+        	if("p".equals(map.getValue())) {
+        		++result;
+        	}
+        	break;
+        }
+        
+        // y-axis
+        for(Map.Entry<Integer, String> map : mapYPositive.entrySet()) {
+        	if("p".equals(map.getValue())) {
+        		++result;
+        	}
+        	break;
+        }
+        
+        for(Map.Entry<Integer, String> map : mapYNegative.entrySet()) {
+        	if("p".equals(map.getValue())) {
+        		++result;
+        	}
+        	break;
+        }
+        
 		return result;
     }
 
