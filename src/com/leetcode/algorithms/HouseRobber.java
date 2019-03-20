@@ -2,10 +2,9 @@ package com.leetcode.algorithms;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
-
-// First attempt
 
 public class HouseRobber {
 	
@@ -46,23 +45,24 @@ public class HouseRobber {
 			return 0;
 		}
 		
-		// Get max amount of money even house number, even
-		// Get max amount of money odd house number, odd
-		int even = 0;
-		int odd = 0;
-		for(int i = 0; i < length; i++) {
-			if(i % 2 == 0) {
-				even += nums[i];
-			} else {
-				odd += nums[i];
+		// Get sums and store it in array
+		List<Integer> results = new ArrayList<>();
+		int i = 0;
+		int diff = 2;
+		while(i < length) {
+			int result = 0;
+			for(int j = 0; j < length; j += diff) {
+				result += nums[j];
 			}
+			results.add(result);
+			++diff;
+			++i;
 		}
 		
-		if(even >= odd) {
-			return even; 
-		} else {
-			return odd;
-		}
+		// Sort array
+		Collections.sort(results);
+		
+		return results.get(length - 1);
     }
 
 }
