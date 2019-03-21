@@ -48,21 +48,23 @@ public class HouseRobber {
 		// Get sums and store it in array
 		List<Integer> results = new ArrayList<>();
 		int i = 0;
-		int diff = 2;
 		while(i < length) {
-			int result = 0;
-			for(int j = 0; j < length; j += diff) {
-				result += nums[j];
+			int diff = 2;
+			while(diff < length) {
+				int result = 0;
+				for(int j = i; j < length; j += diff) {
+					result += nums[j];
+				}
+				results.add(result);
+				++diff;
 			}
-			results.add(result);
-			++diff;
 			++i;
 		}
 		
 		// Sort array
 		Collections.sort(results);
 		
-		return results.get(length - 1);
+		return results.get(results.size() - 1);
     }
 
 }
