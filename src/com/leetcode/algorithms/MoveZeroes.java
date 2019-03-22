@@ -1,6 +1,7 @@
 package com.leetcode.algorithms;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -31,33 +32,49 @@ public class MoveZeroes {
 	}
 	
 	public static void moveZeroes(int[] nums) {
-		// TODO HOW TO STOP WHEN ALL ZEROES HAVE MOVED TO BACK
-		
 		int length = nums.length;
-		
 		int i = 0;
+		int index = 0;
+		int trailingZeroIndex = length - 1; // Initiate trailing zero index
+		boolean isAllZeroes = false;
+		
 		while(i < length) {
 			// Check if not equals '0' then update index 'i'
 			if(nums[i] == 0) {
-				// Define new trailing zero index
-				int index = 0;
-				while(nums[(length - 1) - index] == 0) {
-					++index;
-				}
-				
-				// Loop until '0' reaching trailing zero index
-				int j = i;
-				int trailingZeroIndex = length - index;
-				while(j < trailingZeroIndex - 1) {
-					int temp = nums[j];
-					nums[j] = nums[j + 1];
-					nums[j + 1] = temp;
-					++j;
+				if(i >= trailingZeroIndex) {
+					++i;
+				} else {
+					// Update current trailing zero index
+					while((nums[trailingZeroIndex - index] == 0) && (trailingZeroIndex - index > 0)) {
+						if(trailingZeroIndex - index > 0) {
+							++index;
+						} else {
+							// The whole array are zeroes
+							isAllZeroes = true;
+							break;
+						}
+					}
+					if(isAllZeroes) {
+						break;
+					}
+					trailingZeroIndex -= index;
+					
+					// Loop until '0' reaching trailing zero index
+					int j = i;
+					while(j < trailingZeroIndex) {
+						int temp = nums[j];
+						nums[j] = nums[j + 1];
+						nums[j + 1] = temp;
+						++j;
+					}
 				}
 			} else {
 				++i;
 			}
 		}
+		
+		// Print output
+		System.out.println(Arrays.toString(nums));
     }
 
 }
