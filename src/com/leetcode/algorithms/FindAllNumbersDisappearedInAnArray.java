@@ -26,37 +26,36 @@ public class FindAllNumbersDisappearedInAnArray {
 		}
 		
 		// Print output
-		if(nums.length > 0) {
-			List<Integer> listOutput = findDisappearedNumbers(nums);
-			Integer[] outputs = listOutput.toArray(new Integer[listOutput.size()]);
-			System.out.println(Arrays.toString(outputs));
-		}
+		List<Integer> listOutput = findDisappearedNumbers(nums);
+		Integer[] outputs = listOutput.toArray(new Integer[listOutput.size()]);
+		System.out.println(Arrays.toString(outputs));
 		
 		scanner.close();
 	}
 
 	public static List<Integer> findDisappearedNumbers(int[] nums) {
-		if(nums.length == 0) {
-			return null;
+		List<Integer> disappearedNumber = new ArrayList<>();
+		int length = nums.length;
+		
+		// For nums.length is equal 0
+		if(length == 0) {
+			return new ArrayList<>();
 		}
 		
-        // Sort array
-		Arrays.sort(nums);
-        
-		int expected = nums[0]; // Initiate expected next number
-		// Count disappear numbers
-        List<Integer> disappearedNumber = new ArrayList<>();
-        for(int i = 0; i < (nums.length - 1); i++) {
-        	int current = nums[i];
-        	int next = nums[i + 1];
-        	
-        	if(current != next) {
-        		expected += 1;
-        		if(next != expected) {
-        			disappearedNumber.add(expected);
-        		}
-        	}
-        }
+        // Count disappeared number
+		for(int i = 1; i <= length; i++) {
+			int j = 0;
+			while(j < length) {
+				if(i == nums[j]) {
+					break;
+				}
+				++j;
+			}
+			
+			if(j == length) {
+				disappearedNumber.add(i);
+			}
+		}
 		
 		return disappearedNumber;
     }
