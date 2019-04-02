@@ -1,9 +1,7 @@
 package com.leetcode.algorithms;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Scanner;
 
 public class ShortestUnsortedContinuousSubarray {
@@ -33,22 +31,46 @@ public class ShortestUnsortedContinuousSubarray {
 	}
 	
 	public static int findUnsortedSubarray(int[] nums) {
-        Map<Integer, Integer> map = new HashMap<>();
-        for(int i = 1; i < nums.length; i++) {
-        	int previous = nums[i - 1];
-        	int current = nums[i];
-        	int next = nums[i + 1];
-        	
-        	if(previous > current) {
-        		
-        	} else if(previous > next) {
-        		
-        	} else if(current > next) {
-        		
-        	}
+		int count = 0;
+        
+        for(int i = 0; i < nums.length; i++) {
+        	System.out.println("nums[" + i + "]===" + nums[i]);
+        	for(int j = 0; j < nums.length; j++) {
+	        	if(i != j) {
+	        		//System.out.println("nums[" + i + "]===" + nums[i]);
+	        		//System.out.println("nums[" + j + "]===" + nums[j]);
+	        		if(i == 0) {
+	        			if(nums[i] > nums[j]) {
+	        				System.out.println("nums[i] > nums[j]");
+	        				System.out.println("nums[" + j + "]===" + nums[j]);
+			        		++count;
+			        		break;
+			        	}
+	        		} else if(i == nums.length - 1) {
+	        			if(nums[i] < nums[j] && i > j) {
+	        				System.out.println("nums[i] < nums[j]");
+	        				System.out.println("nums[" + j + "]===" + nums[j]);
+			        		++count;
+			        		break;
+			        	}
+	        		} else {
+	        			if(nums[i] > nums[j] && i < j) {
+	        				System.out.println("nums[i] > nums[j]");
+	        				System.out.println("nums[" + j + "]===" + nums[j]);
+			        		++count;
+			        		break;
+			        	} else if(nums[i] < nums[j] && i > j) {
+			        		System.out.println("nums[i] < nums[j]");
+			        		System.out.println("nums[" + j + "]===" + nums[j]);
+			        		++count;
+			        		break;
+			        	}
+	        		}
+	        	}
+	        }
         }
 		
-		return map.size();
+		return count;
     }
 
 }
