@@ -31,44 +31,56 @@ public class ShortestUnsortedContinuousSubarray {
 	}
 	
 	public static int findUnsortedSubarray(int[] nums) {
-		int count = 0;
+		boolean[] list = new boolean[nums.length];
         
-        for(int i = 0; i < nums.length; i++) {
-        	System.out.println("nums[" + i + "]===" + nums[i]);
+		for(int i = 0; i < nums.length; i++) {
+			System.out.println("i==="+i);
+			
+        	int numi = nums[i];
+        	
+        	boolean isCorrectOrder = true;
+        	
         	for(int j = 0; j < nums.length; j++) {
-	        	if(i != j) {
-	        		//System.out.println("nums[" + i + "]===" + nums[i]);
-	        		//System.out.println("nums[" + j + "]===" + nums[j]);
-	        		if(i == 0) {
-	        			if(nums[i] > nums[j]) {
-	        				System.out.println("nums[i] > nums[j]");
-	        				System.out.println("nums[" + j + "]===" + nums[j]);
-			        		++count;
-			        		break;
-			        	}
-	        		} else if(i == nums.length - 1) {
-	        			if(nums[i] < nums[j] && i > j) {
-	        				System.out.println("nums[i] < nums[j]");
-	        				System.out.println("nums[" + j + "]===" + nums[j]);
-			        		++count;
-			        		break;
-			        	}
-	        		} else {
-	        			if(nums[i] > nums[j] && i < j) {
-	        				System.out.println("nums[i] > nums[j]");
-	        				System.out.println("nums[" + j + "]===" + nums[j]);
-			        		++count;
-			        		break;
-			        	} else if(nums[i] < nums[j] && i > j) {
-			        		System.out.println("nums[i] < nums[j]");
-			        		System.out.println("nums[" + j + "]===" + nums[j]);
-			        		++count;
-			        		break;
-			        	}
-	        		}
-	        	}
-	        }
+        		int numj = nums[j];
+        		
+        		if(i != j) {
+        			if((numi > numj && i < j) || (numi < numj && i > j)) {
+        				isCorrectOrder = false;
+        				break;
+        			}
+        		}
+        	}
+        	
+        	System.out.println("isCorrectOrder==="+isCorrectOrder);
+        	
+        	list[i] = isCorrectOrder;
         }
+		
+		int count = 0;
+		
+		for(int i = 0; i < list.length; i++) {
+			boolean previous = true;
+			boolean current = true;
+			boolean next = true;
+			
+			if(i == 0 || i == list.length - 1) {
+				current = list[i];
+				
+				if(current == false) {
+					++count;
+				}
+			} else {
+				previous = list[i - 1];
+				current = list[i];
+				next = list[i + 1];
+				
+				if(current == false) {
+					++count;
+				} else if(previous == false && current == true && next == false) {
+					++count;
+				}
+			}
+		}
 		
 		return count;
     }
