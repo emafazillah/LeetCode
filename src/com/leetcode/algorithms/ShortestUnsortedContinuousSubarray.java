@@ -34,9 +34,7 @@ public class ShortestUnsortedContinuousSubarray {
 		boolean[] list = new boolean[nums.length];
         
 		for(int i = 0; i < nums.length; i++) {
-			System.out.println("i==="+i);
-			
-        	int numi = nums[i];
+			int numi = nums[i];
         	
         	boolean isCorrectOrder = true;
         	
@@ -51,35 +49,33 @@ public class ShortestUnsortedContinuousSubarray {
         		}
         	}
         	
-        	System.out.println("isCorrectOrder==="+isCorrectOrder);
-        	
         	list[i] = isCorrectOrder;
         }
 		
 		int count = 0;
 		
+		int x = 0;
+		
 		for(int i = 0; i < list.length; i++) {
-			boolean previous = true;
-			boolean current = true;
-			boolean next = true;
-			
-			if(i == 0 || i == list.length - 1) {
-				current = list[i];
-				
-				if(current == false) {
-					++count;
-				}
+			if(list[i]) {
+				++x;
 			} else {
-				previous = list[i - 1];
-				current = list[i];
-				next = list[i + 1];
-				
-				if(current == false) {
-					++count;
-				} else if(previous == false && current == true && next == false) {
-					++count;
-				}
+				break;
 			}
+		}
+		
+		int y = list.length - 1;
+		
+		for(int i = list.length - 1; i >= 0; i--) {
+			if(list[i]) {
+				--y;
+			} else {
+				break;
+			}
+		}
+		
+		for(int i = x; i <= y; i++) {
+			++count;
 		}
 		
 		return count;
