@@ -1,5 +1,6 @@
 package com.leetcode.algorithms;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class MaxIncreaseKeepingSkyline {
@@ -22,13 +23,61 @@ public class MaxIncreaseKeepingSkyline {
 	}
 	
 	public static int maxIncreaseKeepingSkyline(int[][] grid) {
+		int countColumn = grid[0].length;
+		int countRow = grid.length;
 		
-		int[] topOrBottom = new int[grid[0].length];
-		for(int i = 0; i < grid[0].length; i++) {
+		int[] leftOrRight = new int[countRow];
+		for(int i = 0; i < countRow; i++) {
+			int temp[] = new int[countColumn];
+			for(int j = 0; j < countColumn; j++) {
+				temp[j] = grid[i][j];
+			}
 			
+			Arrays.sort(temp);
+			
+			leftOrRight[i] = temp[countColumn - 1];
 		}
 		
-		int[] leftOrRight = new int[grid.length];
+		//System.out.println(Arrays.toString(leftOrRight));
+		
+		int[] topOrBottom = new int[countColumn];
+		for(int j = 0; j < countColumn; j++) {
+			int temp[] = new int[countRow];
+			for(int i = 0; i < countRow; i++) {
+				temp[i] = grid[i][j];
+			}
+			
+			Arrays.sort(temp);
+			
+			topOrBottom[j] = temp[countRow - 1];
+		}
+		
+		//System.out.println(Arrays.toString(topOrBottom));
+		
+		int[] result = new int[countRow + countColumn];
+		for(int i = 0; i < countRow; i++) {
+			int top = topOrBottom[i];
+			
+			int tempColumn[] = new int[countColumn];
+			for(int j = 0; j < countColumn; j++) {
+				int right = leftOrRight[j];
+				
+				int item = 0;
+				if(right >= top) {
+					item = top;
+				} else {
+					item = right;
+				}
+				
+				tempColumn[j] = item;
+			}
+			
+			Arrays.sort(tempColumn);
+			
+			// TODO: Add result
+			
+			//System.out.println(Arrays.toString(tempColumn));
+		}
 		
 		return 0;
     }
