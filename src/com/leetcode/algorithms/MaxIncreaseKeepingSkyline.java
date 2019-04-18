@@ -54,13 +54,13 @@ public class MaxIncreaseKeepingSkyline {
 		
 		//System.out.println(Arrays.toString(topOrBottom));
 		
-		int[] result = new int[countRow + countColumn];
+		int result = 0;
 		for(int i = 0; i < countRow; i++) {
-			int top = topOrBottom[i];
+			int top = leftOrRight[i];
 			
 			int tempColumn[] = new int[countColumn];
 			for(int j = 0; j < countColumn; j++) {
-				int right = leftOrRight[j];
+				int right = topOrBottom[j];
 				
 				int item = 0;
 				if(right >= top) {
@@ -70,16 +70,16 @@ public class MaxIncreaseKeepingSkyline {
 				}
 				
 				tempColumn[j] = item;
+				
+				int oldGrid = grid[i][j];
+				
+				result += Math.abs(item - oldGrid);
 			}
-			
-			Arrays.sort(tempColumn);
-			
-			// TODO: Add result
 			
 			//System.out.println(Arrays.toString(tempColumn));
 		}
 		
-		return 0;
+		return result;
     }
 
 }
