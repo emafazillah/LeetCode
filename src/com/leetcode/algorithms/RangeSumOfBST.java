@@ -9,7 +9,7 @@ public class RangeSumOfBST {
 		Scanner scanner = new Scanner(System.in);
 		int L = scanner.nextInt();
 		int R = scanner.nextInt();
-		TreeNode root = null;
+		TreeNodeRangeSumOfBST root = null;
 		while(scanner.hasNext()) {
 			String input = scanner.next();
 			
@@ -28,9 +28,9 @@ public class RangeSumOfBST {
 		scanner.close();
 	}
 	
-	static TreeNode insertTreeNode(TreeNode root, int val) {
+	static TreeNodeRangeSumOfBST insertTreeNode(TreeNodeRangeSumOfBST root, int val) {
 		if(root == null) {
-			root = new TreeNode(val);
+			root = new TreeNodeRangeSumOfBST(val);
 			return root;
 		}
 		
@@ -43,7 +43,7 @@ public class RangeSumOfBST {
 		return root;
 	}
 	
-	static int rangeSumBST(TreeNode root, int L, int R) {
+	static int rangeSumBST(TreeNodeRangeSumOfBST root, int L, int R) {
 		if(root == null) {
 			return 0;
 		}
@@ -60,9 +60,9 @@ public class RangeSumOfBST {
 }
 
 // Definition for a binary tree node.
-class TreeNode {
+class TreeNodeRangeSumOfBST {
 	int val;
-    TreeNode left;
-    TreeNode right;
-    TreeNode(int x) { val = x; }
+    TreeNodeRangeSumOfBST left;
+    TreeNodeRangeSumOfBST right;
+    TreeNodeRangeSumOfBST(int x) { val = x; }
 }
