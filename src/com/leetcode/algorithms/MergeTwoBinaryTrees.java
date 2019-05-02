@@ -26,7 +26,7 @@ public class MergeTwoBinaryTrees {
 		// TreeNode, t1
 		String[] arrInput1 = input1.split(",");
 		
-		TreeNode t1 = null;
+		TreeNodeMerged t1 = null;
 		for(String input : arrInput1) {
 			if(!"null".equals(input)) {
 				t1 = insertTreeNode(t1, Integer.parseInt(input));
@@ -36,7 +36,7 @@ public class MergeTwoBinaryTrees {
 		// TreeNode, t2
 		String[] arrInput2 = input2.split(",");
 		
-		TreeNode t2 = null;
+		TreeNodeMerged t2 = null;
 		for(String input : arrInput2) {
 			if(!"null".equals(input)) {
 				t2 = insertTreeNode(t2, Integer.parseInt(input));
@@ -54,9 +54,9 @@ public class MergeTwoBinaryTrees {
 		scanner.close();
 	}
 	
-	static TreeNode insertTreeNode(TreeNode treeNode, int input) {
+	static TreeNodeMerged insertTreeNode(TreeNodeMerged treeNode, int input) {
 		if(treeNode == null) {
-			treeNode = new TreeNode(input);
+			treeNode = new TreeNodeMerged(input);
 			return treeNode;
 		}
 		
@@ -69,7 +69,7 @@ public class MergeTwoBinaryTrees {
 		return treeNode;
 	}
 	
-	static TreeNode mergeTrees(TreeNode t1, TreeNode t2) {
+	static TreeNodeMerged mergeTrees(TreeNodeMerged t1, TreeNodeMerged t2) {
 		if(t1 == null && t2 == null) {
 			return null;
 		}
@@ -87,7 +87,7 @@ public class MergeTwoBinaryTrees {
 		//System.out.println(val);
 		mergedTreeNodes.add(val);
 		
-		TreeNode mergedTreeNode = new TreeNode(val);
+		TreeNodeMerged mergedTreeNode = new TreeNodeMerged(val);
         
         // mergedTreeNode left
 		if(t1 != null && t2 != null) {
@@ -112,9 +112,9 @@ public class MergeTwoBinaryTrees {
 }
 
 //Definition for a binary tree node.
-class TreeNode {
+class TreeNodeMerged {
 	int val;
-	TreeNode left;
-	TreeNode right;
-	TreeNode(int x) { val = x; }
+	TreeNodeMerged left;
+	TreeNodeMerged right;
+	TreeNodeMerged(int x) { val = x; }
 }
