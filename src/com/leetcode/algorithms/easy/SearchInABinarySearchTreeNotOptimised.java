@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-public class SearchInABinarySearchTree {
+public class SearchInABinarySearchTreeNotOptimised {
 	
 	private static List<Integer> outputTreeNodeList;
 	
@@ -20,7 +20,7 @@ public class SearchInABinarySearchTree {
 		int inputSearch = scanner.nextInt();
 		
 		// Insert into tree
-		TreeNode inputTreeNode = null;
+		TreeNodeSearchNotOptimised inputTreeNode = null;
 		String[] inputTreeArray = inputTree.split(",");
 		for(String input : inputTreeArray) {
 			if(!"null".equals(input)) {
@@ -36,9 +36,9 @@ public class SearchInABinarySearchTree {
 		scanner.close();
 	}
 	
-	static TreeNode insertTreeNode(TreeNode treeNode, int input) {
+	static TreeNodeSearchNotOptimised insertTreeNode(TreeNodeSearchNotOptimised treeNode, int input) {
 		if(treeNode == null) {
-			treeNode = new TreeNode(input);
+			treeNode = new TreeNodeSearchNotOptimised(input);
 			return treeNode;
 		}
 		
@@ -51,7 +51,7 @@ public class SearchInABinarySearchTree {
 		return treeNode;
 	}
 	
-	static TreeNode searchBST(TreeNode root, int val) {
+	static TreeNodeSearchNotOptimised searchBST(TreeNodeSearchNotOptimised root, int val) {
         if(root == null) {
         	return null;
         }
@@ -84,9 +84,9 @@ public class SearchInABinarySearchTree {
 
 }
 
-class TreeNode {
+class TreeNodeSearchNotOptimised {
 	int val;
-    TreeNode left;
-    TreeNode right;
-    TreeNode(int x) { val = x; }
+    TreeNodeSearchNotOptimised left;
+    TreeNodeSearchNotOptimised right;
+    TreeNodeSearchNotOptimised(int x) { val = x; }
 }
