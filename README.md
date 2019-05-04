@@ -41,6 +41,7 @@
 	- Shortest Unsorted Continuous Subarray
 	- Rotate Array  
 	- Reverse Integer 
+	- N-ary Tree Preorder Traversal 
   
 ### Medium
 	
