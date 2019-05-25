@@ -10,7 +10,13 @@ public class ImplementStackUsingQueues {
 		obj.push(1);
 		obj.push(2);
 		obj.push(3);
-		System.out.println("ok");
+		System.out.println("top: " + obj.top());
+		System.out.println("pop: " + obj.pop());
+		System.out.println("top: " + obj.top());
+		System.out.println("pop: " + obj.pop());
+		System.out.println("top: " + obj.top());
+		System.out.println("pop: " + obj.pop());
+		System.out.println("is empty: " + obj.empty());
 	}
 
 }
@@ -58,14 +64,27 @@ class MyStack {
     	if(this.queue.isEmpty()) {
         	throw new RuntimeException("Queue is empty");
         }
+    	
+    	int value = this.queue.peek();
         
-        Queue<Integer> tempQueue = queue;
-        queue = new LinkedList<>();
-        while(!tempQueue.isEmpty()) {
-        	queue.add(tempQueue.poll());
+    	// Create temporary queue
+        Queue<Integer> tempQueue = new LinkedList<>();
+        int count = 0;
+        int size = this.queue.size();
+        while(count < size) {
+        	if(count > 0) {
+        		tempQueue.add(this.queue.poll());
+        	} else {
+        		this.queue.poll();
+        	}
+        	
+        	++count;
         }
         
-        return queue.peek();
+        // Update queue
+        this.queue = tempQueue;
+        
+        return value;
     }
     
     /** Get the top element. */
@@ -74,19 +93,14 @@ class MyStack {
         	throw new RuntimeException("Queue is empty");
         }
         
-        Queue<Integer> tempQueue = queue;
-        queue = new LinkedList<>();
-        while(!tempQueue.isEmpty()) {
-        	queue.add(tempQueue.poll());
-        }
-        
-        return queue.peek();
+        return this.queue.peek();
     }
     
     /** Returns whether the stack is empty. */
     public boolean empty() {
         return this.queue.isEmpty();
     }
+    
 }
 
 /**
