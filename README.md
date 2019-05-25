@@ -43,6 +43,7 @@
 	- Reverse Integer 
 	- N-ary Tree Preorder Traversal 
 	- Implement Queue using Stacks
+	- Implement Stack using Queues
   
 ### Medium
 	
