@@ -17,10 +17,12 @@ public class ImplementQueueUsingStacks {
 		MyQueue obj = new MyQueue();
 		obj.push(1);
 		obj.push(2);
-		//obj.push(3);
-		System.out.println("pop: " + obj.pop());
+		obj.push(3);
+		//System.out.println("pop: " + obj.pop());
+		//System.out.println("pop: " + obj.pop());
+		//System.out.println("pop: " + obj.pop());
 		System.out.println("peek: " + obj.peek());
-		System.out.println("is empty: " + obj.empty());
+		//System.out.println("is empty: " + obj.empty());
 	}
 	
 }
@@ -48,12 +50,6 @@ class MyQueue {
     	} else {
     		Stack<Integer> tempStack = new Stack<>();
     		
-//    		while(!this.stack.isEmpty()) {
-//    			tempStack.push(this.stack.pop());
-//    		}
-//    		tempStack.push(x);
-//    		this.stack = tempStack;
-    		
     		tempStack.push(x);
             int size = this.stack.size();
             int count = 0;
@@ -78,14 +74,20 @@ class MyQueue {
         
         int value = this.stack.get(0);
         
-        // Update stack
         Stack<Integer> tempStack = new Stack<>();
         int size = this.stack.size() - 1;
         while(size > 0) {
         	tempStack.push(this.stack.pop());
         	--size;
         }
-        this.stack = tempStack;
+        
+        // Update stack
+        this.stack = new Stack<>();
+        size = tempStack.size();
+        while(size > 0) {
+        	this.stack.push(tempStack.pop());
+        	--size;
+        }
         
         return value;
     }
