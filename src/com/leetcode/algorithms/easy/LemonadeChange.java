@@ -45,6 +45,8 @@ public class LemonadeChange {
 						return false;
 					} else if(item == 10 && fives.isEmpty() && tens.isEmpty()) {
 						return false;
+					} else if(item == 15 && fives.isEmpty() && tens.isEmpty()) {
+						return false;
 					}
 					
 					int value = 0;
