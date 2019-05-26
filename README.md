@@ -46,6 +46,7 @@
 	- Implement Stack using Queues
 	- Lemonade Change
 	- Min Stack
+	- Climbing Stairs
   
 ### Medium
 	
