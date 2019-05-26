@@ -1,9 +1,10 @@
 package com.leetcode.algorithms.easy;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 import java.util.Scanner;
-import java.util.Stack;
 
 public class LemonadeChange {
 	
@@ -31,22 +32,27 @@ public class LemonadeChange {
 	}
 	
 	static boolean lemonadeChange(int[] bills) {
-		Stack<Integer> stack = new Stack<>();
+		Queue<Integer> queue = new LinkedList<>();
 		
 		for(int i = 0; i < bills.length; i++) {
-			int item = bills[i];
-			if(item == 5) {
-				stack.push(item);
-			} else {
-				while(item > 5) {
-					if(stack.isEmpty()) {
+			if(bills[i] > 5) {
+				int item = bills[i] - 5;
+				int value = 0;
+				
+				while(item >= 5) {
+					if(queue.isEmpty()) {
 						return false;
 					}
-					stack.pop();
-					stack.push(item);
-					item -= 5;					
+					
+					value += queue.peek();
+					if(item % value == 0) {
+						item -= value;
+					}
+					queue.remove();
 				}
 			}
+			
+			queue.add(bills[i]);
 		}
 		
 		return true;
