@@ -1,9 +1,7 @@
 package com.leetcode.algorithms.easy;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Queue;
 import java.util.Scanner;
 
 public class LemonadeChange {
@@ -32,27 +30,51 @@ public class LemonadeChange {
 	}
 	
 	static boolean lemonadeChange(int[] bills) {
-		Queue<Integer> queue = new LinkedList<>();
+		List<Integer> fives = new ArrayList<>();
+		List<Integer> tens = new ArrayList<>();
+		List<Integer> twenties = new ArrayList<>();
 		
 		for(int i = 0; i < bills.length; i++) {
 			if(bills[i] > 5) {
 				int item = bills[i] - 5;
-				int value = 0;
 				
 				while(item >= 5) {
-					if(queue.isEmpty()) {
+					if(fives.isEmpty() && tens.isEmpty() && twenties.isEmpty()) {
 						return false;
 					}
 					
-					value += queue.peek();
-					if(item % value == 0) {
-						item -= value;
+					int value = 0;
+					
+					if(!twenties.isEmpty()) {
+						value += twenties.get(0);
+						twenties.remove(0);
 					}
-					queue.remove();
+					
+					if(!tens.isEmpty()) {
+						value += tens.get(0);
+						tens.remove(0);
+					}
+					
+					if(!fives.isEmpty()) {
+						value += fives.get(0);
+						fives.remove(0);
+					}
+					
+					item -= value;
 				}
 			}
 			
-			queue.add(bills[i]);
+			switch(bills[i]) {
+				case 5:
+					fives.add(bills[i]);
+					break;
+				case 10:
+					tens.add(bills[i]);
+					break;
+				case 20:
+					twenties.add(bills[i]);
+					break;
+			}
 		}
 		
 		return true;
