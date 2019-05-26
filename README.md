@@ -45,6 +45,7 @@
 	- Implement Queue using Stacks
 	- Implement Stack using Queues
 	- Lemonade Change
+	- Min Stack
   
 ### Medium
 	
