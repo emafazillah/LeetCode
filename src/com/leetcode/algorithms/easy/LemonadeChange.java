@@ -41,21 +41,25 @@ public class LemonadeChange {
 				while(item >= 5) {
 					if(fives.isEmpty() && tens.isEmpty() && twenties.isEmpty()) {
 						return false;
+					} else if(item == 5 && fives.isEmpty()) {
+						return false;
+					} else if(item == 10 && fives.isEmpty() && tens.isEmpty()) {
+						return false;
 					}
 					
 					int value = 0;
 					
-					if(!twenties.isEmpty()) {
+					if(!twenties.isEmpty() && item >= twenties.get(0)) {
 						value += twenties.get(0);
 						twenties.remove(0);
 					}
 					
-					if(!tens.isEmpty()) {
+					if(!tens.isEmpty() && item >= tens.get(0)) {
 						value += tens.get(0);
 						tens.remove(0);
 					}
 					
-					if(!fives.isEmpty()) {
+					if(!fives.isEmpty() && item >= fives.get(0)) {
 						value += fives.get(0);
 						fives.remove(0);
 					}
