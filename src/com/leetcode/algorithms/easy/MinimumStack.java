@@ -5,12 +5,16 @@ import java.util.Stack;
 public class MinimumStack {
 	public static void main(String...strings) {
 		MinStack minStack = new MinStack();
-		minStack.push(-2);
+		minStack.push(2);
 		minStack.push(0);
-		minStack.push(-3);
+		minStack.push(3);
+		minStack.push(0);
 		System.out.println("get min: " + minStack.getMin());
 		minStack.pop();
-		minStack.top();
+		System.out.println("get min: " + minStack.getMin());
+		minStack.pop();
+		System.out.println("get min: " + minStack.getMin());
+		minStack.pop();
 		System.out.println("get min: " + minStack.getMin());
 	}
 }
@@ -60,10 +64,11 @@ class MinStack {
         		if(!minimumStack.isEmpty()) {
         			if(minimumStack.peek() > stack.get(count)) {
     	        		minimumStack.pop();
+    	        		minimumStack.push(stack.get(count));
     	        	}
+        		} else {
+        			minimumStack.push(stack.get(count));
         		}
-        		
-        		minimumStack.push(stack.get(count));
         		
         		--count;
         	}
