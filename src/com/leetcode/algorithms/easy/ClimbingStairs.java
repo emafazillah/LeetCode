@@ -9,7 +9,6 @@ public class ClimbingStairs {
 	public static void main(String...strings) {
 		Scanner scanner = new Scanner(System.in);
 		int step = scanner.nextInt();
-		fn = new Integer[step];
 		System.out.println(climbStairs(step));
 		scanner.close();
 	}
@@ -23,6 +22,8 @@ public class ClimbingStairs {
     }
 	
 	public static int climbStairs(int n) {
+		fn = new Integer[n];
+		
 		if(fn[n - 1] == null) {
 			fn[n - 1] = fib(n + 1);
 		}
