@@ -6,25 +6,21 @@ public class ClimbingStairs {
 	
 	public static void main(String...strings) {
 		Scanner scanner = new Scanner(System.in);
-		int n = scanner.nextInt();
-		System.out.println(climbStairs(n));
+		int step = scanner.nextInt();
+		System.out.println(climbStairs(step));
 		scanner.close();
 	}
 	
-	public static int climbStairs(int n) {
-		int noOfWay = 0;
-		
-		for(int step = 1; step <= 2; step++) {
-			int count = n;
-			
-			while(count >= 0) {
-				count -= step;
-			}
-			
-			++noOfWay;
+	public static int fib(int n) {
+		if(n <= 1) {
+			return n;
 		}
 		
-		return noOfWay;
+		return fib(n - 1) + fib(n - 2);
+    }
+	
+	public static int climbStairs(int n) {
+		return fib(n + 1);
     }
 	
 }
