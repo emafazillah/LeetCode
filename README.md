@@ -47,6 +47,7 @@
 	- Lemonade Change
 	- Min Stack
 	- Climbing Stairs
+	- Binary Search
   
 ### Medium
 	
