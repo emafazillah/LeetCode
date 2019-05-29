@@ -10,7 +10,7 @@
 	- Sort Array By Parity (Array)
 	- Unique Email Addresses
 	- Squares of a Sorted Array (Sort)
-	- Flipping an Image
+	- Flipping an Image (Array)
 	- Hamming Distance 
 	- DI String Match (String)
 	- Merge Two Binary Trees (Tree)
@@ -19,17 +19,17 @@
 	- Array Partition I (Array)
 	- Search in a Binary Search Tree (Binary Search)
 	- Sort Array By Parity II (Sort)
-	- Fibonacci Number  
-	- Available Captures for Rook  
-	- Find Common Characters 
+	- Fibonacci Number (Array)
+	- Available Captures for Rook (Array)
+	- Find Common Characters (Array)
 	- Sum of Even Numbers After Queries (Queue)
 	- Middle of the Linked List (Linked List)
 	- Reverse String (String)
 	- Single Number 
 	- Reverse Linked List (Linked List)
-	- Move Zeroes    
+	- Move Zeroes (Array)
 	- Find All Numbers Disappeared in an Array (Array)
-	- Majority Element 
+	- Majority Element (Array)
 	- Roman to Integer  
 	- Valid Anagram 
 	- Two Sum II - Input array is sorted (Two Pointer)
@@ -38,7 +38,7 @@
 	- Remove Duplicates from Sorted Array (Sort)
 	- Find All Anagrams in a String (String)
 	- Valid Parentheses 
-	- Shortest Unsorted Continuous Subarray
+	- Shortest Unsorted Continuous Subarray (Array)
 	- Rotate Array (Array)
 	- Reverse Integer 
 	- N-ary Tree Preorder Traversal (Tree)

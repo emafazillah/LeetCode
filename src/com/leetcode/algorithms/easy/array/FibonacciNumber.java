@@ -1,4 +1,4 @@
-package com.leetcode.algorithms.easy;
+package com.leetcode.algorithms.easy.array;
 
 import java.math.BigInteger;
 import java.util.Scanner;
