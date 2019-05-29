@@ -52,7 +52,7 @@
 ### Medium
 	
 	- Max Increase to Keep City Skyline
-	- Encode and Decode TinyURL
+	- Encode and Decode TinyURL (Hash Table)
 	- Reveal Cards In Increasing Order (Array)
 	- Sort an Array   
 	- Find All Duplicates in an Array (Array)
