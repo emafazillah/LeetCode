@@ -13,7 +13,7 @@
 	- Flipping an Image
 	- Hamming Distance 
 	- DI String Match (String)
-	- Merge Two Binary Trees
+	- Merge Two Binary Trees (Tree)
 	- Self Dividing Numbers 
 	- Peak Index in a Mountain Array (Array)
 	- Array Partition I (Array)
@@ -41,7 +41,7 @@
 	- Shortest Unsorted Continuous Subarray
 	- Rotate Array (Array)
 	- Reverse Integer 
-	- N-ary Tree Preorder Traversal 
+	- N-ary Tree Preorder Traversal (Tree)
 	- Implement Queue using Stacks
 	- Implement Stack using Queues
 	- Lemonade Change
