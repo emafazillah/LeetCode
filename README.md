@@ -3,7 +3,7 @@
 ### Easy
 
 	- Jewels and Stones (Divide and Conquer)
-	- Range Sum of BST
+	- Range Sum of BST (Tree)
 	- To Lower Case
 	- Unique Morse Code Words
 	- N-Repeated Element in Size 2N Array (Array)
