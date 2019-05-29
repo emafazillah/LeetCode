@@ -6,17 +6,17 @@
 	- Range Sum of BST
 	- To Lower Case
 	- Unique Morse Code Words
-	- N-Repeated Element in Size 2N Array
-	- Sort Array By Parity 
+	- N-Repeated Element in Size 2N Array (Array)
+	- Sort Array By Parity (Array)
 	- Unique Email Addresses
-	- Squares of a Sorted Array
+	- Squares of a Sorted Array (Array)
 	- Flipping an Image
 	- Hamming Distance 
 	- DI String Match 
 	- Merge Two Binary Trees
 	- Self Dividing Numbers 
-	- Peak Index in a Mountain Array 
-	- Array Partition I 
+	- Peak Index in a Mountain Array (Array)
+	- Array Partition I (Array)
 	- Search in a Binary Search Tree
 	- Sort Array By Parity II
 	- Fibonacci Number  
@@ -28,18 +28,18 @@
 	- Single Number 
 	- Reverse Linked List 
 	- Move Zeroes    
-	- Find All Numbers Disappeared in an Array
+	- Find All Numbers Disappeared in an Array (Array)
 	- Majority Element 
 	- Roman to Integer  
 	- Valid Anagram 
-	- Two Sum II - Input array is sorted 
+	- Two Sum II - Input array is sorted (Array)
 	- Two Sum 
 	- Palindrome Number 
-	- Remove Duplicates from Sorted Array
+	- Remove Duplicates from Sorted Array (Array)
 	- Find All Anagrams in a String
 	- Valid Parentheses 
 	- Shortest Unsorted Continuous Subarray
-	- Rotate Array  
+	- Rotate Array (Array)
 	- Reverse Integer 
 	- N-ary Tree Preorder Traversal 
 	- Implement Queue using Stacks
@@ -58,3 +58,4 @@
 	- Find All Duplicates in an Array 
 	- Single Element in a Sorted Array
 	- Remove Duplicates from Sorted Array II 
+	- Capacity To Ship Packages Within D Days
