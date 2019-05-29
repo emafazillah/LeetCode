@@ -1,4 +1,4 @@
-package com.leetcode.algorithms.easy;
+package com.leetcode.algorithms.easy.divideandconquer;
 
 import java.util.Scanner;
 

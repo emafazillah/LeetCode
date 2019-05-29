@@ -2,7 +2,7 @@
 
 ### Easy
 
-	- Jewels and Stones
+	- Jewels and Stones (Divide and Conquer)
 	- Range Sum of BST
 	- To Lower Case
 	- Unique Morse Code Words
