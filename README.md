@@ -17,7 +17,7 @@
 	- Self Dividing Numbers 
 	- Peak Index in a Mountain Array (Array)
 	- Array Partition I (Array)
-	- Search in a Binary Search Tree
+	- Search in a Binary Search Tree (Binary Search)
 	- Sort Array By Parity II
 	- Fibonacci Number  
 	- Available Captures for Rook  
@@ -47,7 +47,7 @@
 	- Lemonade Change
 	- Min Stack
 	- Climbing Stairs
-	- Binary Search
+	- Binary Search (Binary Search)
   
 ### Medium
 	

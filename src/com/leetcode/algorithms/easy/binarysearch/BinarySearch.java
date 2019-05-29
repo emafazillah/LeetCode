@@ -1,4 +1,4 @@
-package com.leetcode.algorithms.easy;
+package com.leetcode.algorithms.easy.binarysearch;
 
 import java.util.ArrayList;
 import java.util.List;
