@@ -53,9 +53,9 @@
 	
 	- Max Increase to Keep City Skyline
 	- Encode and Decode TinyURL
-	- Reveal Cards In Increasing Order
+	- Reveal Cards In Increasing Order (Array)
 	- Sort an Array   
-	- Find All Duplicates in an Array 
+	- Find All Duplicates in an Array (Array)
 	- Single Element in a Sorted Array
-	- Remove Duplicates from Sorted Array II 
+	- Remove Duplicates from Sorted Array II (Array)
 	- Capacity To Ship Packages Within D Days
