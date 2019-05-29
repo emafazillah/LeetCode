@@ -9,7 +9,7 @@
 	- N-Repeated Element in Size 2N Array (Array)
 	- Sort Array By Parity (Array)
 	- Unique Email Addresses
-	- Squares of a Sorted Array (Array)
+	- Squares of a Sorted Array (Sort)
 	- Flipping an Image
 	- Hamming Distance 
 	- DI String Match (String)
@@ -18,7 +18,7 @@
 	- Peak Index in a Mountain Array (Array)
 	- Array Partition I (Array)
 	- Search in a Binary Search Tree (Binary Search)
-	- Sort Array By Parity II
+	- Sort Array By Parity II (Sort)
 	- Fibonacci Number  
 	- Available Captures for Rook  
 	- Find Common Characters 
@@ -35,7 +35,7 @@
 	- Two Sum II - Input array is sorted (Two Pointer)
 	- Two Sum (Two Pointer)
 	- Palindrome Number 
-	- Remove Duplicates from Sorted Array (Array)
+	- Remove Duplicates from Sorted Array (Sort)
 	- Find All Anagrams in a String (String)
 	- Valid Parentheses 
 	- Shortest Unsorted Continuous Subarray
