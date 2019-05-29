@@ -4,17 +4,17 @@
 
 	- Jewels and Stones (Divide and Conquer)
 	- Range Sum of BST (Tree)
-	- To Lower Case
-	- Unique Morse Code Words
+	- To Lower Case (String)
+	- Unique Morse Code Words (String)
 	- N-Repeated Element in Size 2N Array (Array)
 	- Sort Array By Parity (Array)
-	- Unique Email Addresses
+	- Unique Email Addresses (String)
 	- Squares of a Sorted Array (Sort)
 	- Flipping an Image (Array)
 	- Hamming Distance (Bit Manipulation)
 	- DI String Match (String)
 	- Merge Two Binary Trees (Tree)
-	- Self Dividing Numbers 
+	- Self Dividing Numbers (Math)
 	- Peak Index in a Mountain Array (Array)
 	- Array Partition I (Array)
 	- Search in a Binary Search Tree (Binary Search)
