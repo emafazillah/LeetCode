@@ -25,13 +25,13 @@
 	- Sum of Even Numbers After Queries (Queue)
 	- Middle of the Linked List (Linked List)
 	- Reverse String (String)
-	- Single Number 
+	- Single Number (Hash Table)
 	- Reverse Linked List (Linked List)
 	- Move Zeroes (Array)
 	- Find All Numbers Disappeared in an Array (Array)
 	- Majority Element (Array)
 	- Roman to Integer  
-	- Valid Anagram 
+	- Valid Anagram (Hash Table)
 	- Two Sum II - Input array is sorted (Two Pointer)
 	- Two Sum (Two Pointer)
 	- Palindrome Number 
