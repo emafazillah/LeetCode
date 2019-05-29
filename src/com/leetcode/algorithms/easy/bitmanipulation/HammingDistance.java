@@ -1,4 +1,4 @@
-package com.leetcode.algorithms.easy;
+package com.leetcode.algorithms.easy.bitmanipulation;
 
 import java.util.Scanner;
 

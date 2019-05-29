@@ -11,7 +11,7 @@
 	- Unique Email Addresses
 	- Squares of a Sorted Array (Sort)
 	- Flipping an Image (Array)
-	- Hamming Distance 
+	- Hamming Distance (Bit Manipulation)
 	- DI String Match (String)
 	- Merge Two Binary Trees (Tree)
 	- Self Dividing Numbers 
@@ -34,10 +34,10 @@
 	- Valid Anagram (Hash Table)
 	- Two Sum II - Input array is sorted (Two Pointer)
 	- Two Sum (Two Pointer)
-	- Palindrome Number 
+	- Palindrome Number (Math)
 	- Remove Duplicates from Sorted Array (Sort)
 	- Find All Anagrams in a String (String)
-	- Valid Parentheses 
+	- Valid Parentheses (Stack)
 	- Shortest Unsorted Continuous Subarray (Array)
 	- Rotate Array (Array)
 	- Reverse Integer (Math)
