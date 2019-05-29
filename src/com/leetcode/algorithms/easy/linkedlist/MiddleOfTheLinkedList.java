@@ -1,10 +1,10 @@
-package com.leetcode.algorithms.easy;
+package com.leetcode.algorithms.easy.linkedlist;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class ReverseLinkedList {
+public class MiddleOfTheLinkedList {
 	
 	public static void main(String...strings) {
 		// Input
@@ -28,13 +28,7 @@ public class ReverseLinkedList {
 			--count;
 		}
 		
-		// Print output
-		ListNode output = reverseList(node);
-		while(output.next != null) {
-			System.out.println(output.val);
-			output = output.next;
-		}
-		System.out.println(output.val);
+		System.out.println(middleNode(node).val);
 		
 		scanner.close();
 	}
@@ -56,22 +50,28 @@ public class ReverseLinkedList {
 	    }
 	}
 	
-	public static ListNode reverseList(ListNode head) {
-		if(head == null) {
-			return null;
+	public static ListNode middleNode(ListNode head) {
+		// If head is null
+        if (head == null) {
+        	return null;
+        }
+		
+        // Get middle of the node
+        ListNode temp = head;
+        int count = 1;
+		while(temp.next != null) {
+			temp = temp.next;
+			++count;
 		}
 		
-        // Reverse linked list
-        // reverseListNode to store reverse list node
-        ListNode reverseListNode = new ListNode(head.val);
-    	while(head.next != null) {
-    		ListNode temp = reverseListNode;
-    		reverseListNode = new ListNode(head.next.val);
-    		reverseListNode.next = temp;
+		int middlePoint = count / 2;
+		int countMiddlePoint = 0;
+		while(countMiddlePoint < middlePoint) {
 			head = head.next;
-    	}
+			++countMiddlePoint;
+		}
 		
-		return reverseListNode;
+		return head;
     }
 
 }

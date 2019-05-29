@@ -23,10 +23,10 @@
 	- Available Captures for Rook  
 	- Find Common Characters 
 	- Sum of Even Numbers After Queries (Queue)
-	- Middle of the Linked List 
+	- Middle of the Linked List (Linked List)
 	- Reverse String (String)
 	- Single Number 
-	- Reverse Linked List 
+	- Reverse Linked List (Linked List)
 	- Move Zeroes    
 	- Find All Numbers Disappeared in an Array (Array)
 	- Majority Element 
