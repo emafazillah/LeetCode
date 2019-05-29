@@ -12,7 +12,7 @@
 	- Squares of a Sorted Array (Array)
 	- Flipping an Image
 	- Hamming Distance 
-	- DI String Match 
+	- DI String Match (String)
 	- Merge Two Binary Trees
 	- Self Dividing Numbers 
 	- Peak Index in a Mountain Array (Array)
@@ -24,7 +24,7 @@
 	- Find Common Characters 
 	- Sum of Even Numbers After Queries 
 	- Middle of the Linked List 
-	- Reverse String 
+	- Reverse String (String)
 	- Single Number 
 	- Reverse Linked List 
 	- Move Zeroes    
@@ -36,7 +36,7 @@
 	- Two Sum 
 	- Palindrome Number 
 	- Remove Duplicates from Sorted Array (Array)
-	- Find All Anagrams in a String
+	- Find All Anagrams in a String (String)
 	- Valid Parentheses 
 	- Shortest Unsorted Continuous Subarray
 	- Rotate Array (Array)

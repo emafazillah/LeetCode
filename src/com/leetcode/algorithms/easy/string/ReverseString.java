@@ -1,4 +1,4 @@
-package com.leetcode.algorithms.easy;
+package com.leetcode.algorithms.easy.string;
 
 import java.util.Arrays;
 import java.util.Scanner;
