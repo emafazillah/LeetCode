@@ -1,4 +1,4 @@
-package com.leetcode.algorithms.easy.array;
+package com.leetcode.algorithms.easy.twopointers;
 
 import java.util.ArrayList;
 import java.util.List;

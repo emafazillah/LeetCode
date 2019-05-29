@@ -32,8 +32,8 @@
 	- Majority Element 
 	- Roman to Integer  
 	- Valid Anagram 
-	- Two Sum II - Input array is sorted (Array)
-	- Two Sum 
+	- Two Sum II - Input array is sorted (Two Pointer)
+	- Two Sum (Two Pointer)
 	- Palindrome Number 
 	- Remove Duplicates from Sorted Array (Array)
 	- Find All Anagrams in a String (String)
