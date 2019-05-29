@@ -43,10 +43,10 @@
 	- Reverse Integer 
 	- N-ary Tree Preorder Traversal (Tree)
 	- Implement Queue using Stacks
-	- Implement Stack using Queues
+	- Implement Stack using Queues (Stack)
 	- Lemonade Change
-	- Min Stack
-	- Climbing Stairs
+	- Min Stack (Stack)
+	- Climbing Stairs (Stack)
 	- Binary Search (Binary Search)
   
 ### Medium
