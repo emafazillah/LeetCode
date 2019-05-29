@@ -51,11 +51,11 @@
   
 ### Medium
 	
-	- Max Increase to Keep City Skyline
+	- Max Increase to Keep City Skyline (Array)
 	- Encode and Decode TinyURL (Hash Table)
 	- Reveal Cards In Increasing Order (Array)
-	- Sort an Array   
+	- Sort an Array (Sort)
 	- Find All Duplicates in an Array (Array)
-	- Single Element in a Sorted Array
+	- Single Element in a Sorted Array (Sort)
 	- Remove Duplicates from Sorted Array II (Array)
-	- Capacity To Ship Packages Within D Days
+	- Capacity To Ship Packages Within D Days (Binary Search)

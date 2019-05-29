@@ -1,4 +1,4 @@
-package com.leetcode.algorithms.medium;
+package com.leetcode.algorithms.medium.array;
 
 import java.util.Arrays;
 import java.util.Scanner;

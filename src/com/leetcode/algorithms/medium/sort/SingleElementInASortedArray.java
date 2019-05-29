@@ -1,4 +1,4 @@
-package com.leetcode.algorithms.medium;
+package com.leetcode.algorithms.medium.sort;
 
 import java.util.ArrayList;
 import java.util.HashMap;
