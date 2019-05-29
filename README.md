@@ -22,7 +22,7 @@
 	- Fibonacci Number  
 	- Available Captures for Rook  
 	- Find Common Characters 
-	- Sum of Even Numbers After Queries 
+	- Sum of Even Numbers After Queries (Queue)
 	- Middle of the Linked List 
 	- Reverse String (String)
 	- Single Number 
@@ -42,9 +42,9 @@
 	- Rotate Array (Array)
 	- Reverse Integer 
 	- N-ary Tree Preorder Traversal (Tree)
-	- Implement Queue using Stacks
+	- Implement Queue using Stacks (Queue)
 	- Implement Stack using Queues (Stack)
-	- Lemonade Change
+	- Lemonade Change (Queue)
 	- Min Stack (Stack)
 	- Climbing Stairs (Stack)
 	- Binary Search (Binary Search)
