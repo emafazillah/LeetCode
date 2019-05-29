@@ -30,7 +30,7 @@
 	- Move Zeroes (Array)
 	- Find All Numbers Disappeared in an Array (Array)
 	- Majority Element (Array)
-	- Roman to Integer  
+	- Roman to Integer (Math)
 	- Valid Anagram (Hash Table)
 	- Two Sum II - Input array is sorted (Two Pointer)
 	- Two Sum (Two Pointer)
@@ -40,7 +40,7 @@
 	- Valid Parentheses 
 	- Shortest Unsorted Continuous Subarray (Array)
 	- Rotate Array (Array)
-	- Reverse Integer 
+	- Reverse Integer (Math)
 	- N-ary Tree Preorder Traversal (Tree)
 	- Implement Queue using Stacks (Queue)
 	- Implement Stack using Queues (Stack)
