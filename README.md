@@ -59,3 +59,4 @@
 	- Single Element in a Sorted Array (Sort)
 	- Remove Duplicates from Sorted Array II (Array)
 	- Capacity To Ship Packages Within D Days (Binary Search)
+	- Kth Smallest Element in a BST (Binary Search)
