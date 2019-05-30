@@ -48,6 +48,7 @@
 	- Min Stack (Stack)
 	- Climbing Stairs (Stack)
 	- Binary Search (Binary Search)
+	- First Bad Version (Binary Search)
   
 ### Medium
 	
@@ -60,3 +61,4 @@
 	- Remove Duplicates from Sorted Array II (Array)
 	- Capacity To Ship Packages Within D Days (Binary Search)
 	- Kth Smallest Element in a BST (Binary Search)
+	- Time Based Key-Value Store (Binary Search)
