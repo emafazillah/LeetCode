@@ -11,6 +11,16 @@ public class KthSmallest {
         	return 0;
         }
         
+        if(root.left == null && root.right == null) {
+        	++count;
+        	
+        	if(count == k) {
+        		return count;
+        	} else {
+        		return 0;
+        	}
+        }
+        
         if(root.left != null) {
         	++count;
             
