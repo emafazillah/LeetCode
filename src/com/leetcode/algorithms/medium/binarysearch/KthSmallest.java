@@ -11,27 +11,17 @@ public class KthSmallest {
         	return 0;
         }
         
-        if(root.left == null && root.right == null) {
-        	++count;
-        	
-        	if(count == k) {
-        		return count;
-        	} else {
-        		return 0;
-        	}
+        if(root.left != null) {
+        	return kthSmallest(root.left, k);
         }
         
-        if(root.left != null) {
-        	++count;
-            
-            if(count == k) {
-            	return count;
-            } else {
-            	return kthSmallest(root.left, k);
-            }
-        } else {
-        	return kthSmallest(root.right, k);
+        ++count;
+        
+        if(count == k) {
+        	return root.val;
         }
+        
+        return kthSmallest(root.right, k);
     }
 	
 	public static TreeNode insertTreeNode(TreeNode treeNode, int val) {
@@ -40,9 +30,9 @@ public class KthSmallest {
 		}
 		
 		if(treeNode.val > val) {
-			treeNode.right = insertTreeNode(treeNode.right, val);
-		} else if(treeNode.val < val) {
 			treeNode.left = insertTreeNode(treeNode.left, val);
+		} else if(treeNode.val < val) {
+			treeNode.right = insertTreeNode(treeNode.right, val);
 		}
 		
 		return treeNode;
