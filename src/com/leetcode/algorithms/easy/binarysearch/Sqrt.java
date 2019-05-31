@@ -12,8 +12,8 @@ public class Sqrt {
 	}
 	
 	public static int mySqrt(int x) {
-        if(x == 1) {
-        	return x;
+		if(x <= 3) {
+        	return 1;
         }
         
         long mid = 0;
@@ -21,15 +21,12 @@ public class Sqrt {
 		long right = x / 2;
 		while(left <= right) {
 			mid = left + (right + left) / 2;
-			//System.out.println("mid: " + mid);
 			if (x == mid * mid) {
 				break;
 			} else if(x > mid * mid) {
 				left = mid + 1;
-				//System.out.println("left: " + left);
             } else {
                 right = mid - 1;
-                //System.out.println("right: " + right);
             }
 		}
 		
