@@ -12,20 +12,20 @@ public class ValidPerfectSquare {
 	}
 	
 	public static boolean isPerfectSquare(int num) {
-		int perfectSquare = 1;
-		int count = 1;
-		while(perfectSquare <= num) {
-			if(perfectSquare / num == 1) {
-				break;
-			}
-			perfectSquare = count * count;
-			++count;
+		int left = 1;
+		int right = num / 2;
+		while(left <= right) {
+			int mid = left + (right - left) / 2;
+			if (num == mid * mid) {
+				return true;
+			} else if(num > mid + mid) {
+				left = mid + 1;
+            } else {
+                right = mid - 1;
+            }
 		}
 		
-		if(perfectSquare == num) {
-			return true;
-		} else {
-			return false;
-		}
+		return false;
     }
+	
 }
