@@ -12,7 +12,11 @@ public class Sqrt {
 	}
 	
 	public static int mySqrt(int x) {
-		if(x <= 3) {
+		if(x == 0) {
+			return 0;
+		}
+		
+        if(x >= 1 && x <= 3) {
         	return 1;
         }
         
