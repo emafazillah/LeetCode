@@ -24,8 +24,8 @@ public class Sqrt {
         long left = 1;
 		long right = x / 2;
 		while(left <= right) {
-			mid = left + (right + left) / 2;
-			if (x == mid * mid) {
+			mid = (right + left) / 2;
+			if (x == mid * mid || (mid * mid < x && (mid + 1) * (mid + 1) > x)) {
 				break;
 			} else if(x > mid * mid) {
 				left = mid + 1;
