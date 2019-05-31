@@ -49,6 +49,7 @@
 	- Climbing Stairs (Stack)
 	- Binary Search (Binary Search)
 	- First Bad Version (Binary Search)
+	- Valid Perfect Square (Binary Search)
   
 ### Medium
 	
