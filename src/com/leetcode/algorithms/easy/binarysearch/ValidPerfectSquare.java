@@ -16,10 +16,10 @@ public class ValidPerfectSquare {
 			return true;
 		}
 		
-		int left = 1;
-		int right = num / 2;
+		long left = 1;
+		long right = num / 2;
 		while(left <= right) {
-			int mid = left + (right - left) / 2;
+			long mid = left + (right - left) / 2;
 			if (num == mid * mid) {
 				return true;
 			} else if(num > mid * mid) {
