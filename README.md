@@ -50,6 +50,7 @@
 	- Binary Search (Binary Search)
 	- First Bad Version (Binary Search)
 	- Valid Perfect Square (Binary Search)
+	- Sqrt(x) (Binary Search)
   
 ### Medium
 	
