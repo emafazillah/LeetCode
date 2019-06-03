@@ -1,5 +1,7 @@
 package com.leetcode.algorithms.medium.binarysearch;
 
+import java.util.Scanner;
+
 public class TimeMap {
 	
 	/** Initialize your data structure here. */
@@ -16,14 +18,20 @@ public class TimeMap {
     }
     
     public static void main(String...strings) {
-    	String key = "";
-    	String value = "";
-    	int timestamp = 0;
+    	// Input
+    	Scanner scanner = new Scanner(System.in);
+    	String key = scanner.next();
+    	String value = scanner.next();
+    	int timestamp = scanner.nextInt();
     	
     	// Your TimeMap object will be instantiated and called as such:
     	TimeMap obj = new TimeMap();
     	obj.set(key, value, timestamp);
     	String param_2 = obj.get(key, timestamp);
+    	
+    	System.out.print(param_2);
+    	
+    	scanner.close();
     }
     
 }
