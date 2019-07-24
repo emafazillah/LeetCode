@@ -53,11 +53,18 @@ public class NonDecreasingArray {
 								if(countModified > 0) {
 									return false;
 								} else {
-									if(jValue - 1 > 0) {
-										nums[i] = jValue - 1;
+									if(i == 0) {
+										if(jValue - 1 > 0) {
+											nums[i] = jValue - 1;
+										} else {
+											nums[i] = jValue;
+										}
 										iValue = nums[i];
-										++countModified;
+									} else {
+										nums[j] = iValue;
+										jValue = nums[j];
 									}
+									++countModified;
 								}
 							}
 						}
