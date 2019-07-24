@@ -43,19 +43,18 @@ public class NonDecreasingArray {
 				return true;
 			} else {
 				for(int i = 0; i < num.length; i++) {
-					int test = num[i];
-					for(int j = 0; j < num.length; j++) {
-						if(test == num[j]) {
-							break;
-						} else {
-							if(test < num[j]) {
-								return false;
+					int iValue = num[i];
+					if(i + 1 <= num.length) {
+						for(int j = i + 1; j < num.length; j++) {
+							int jValue = num[j];
+							if(iValue < jValue) {
+								return true;
 							}
 						}
 					}
 				}
 				
-				return true;
+				return false;
 			}
 		}
 	}
