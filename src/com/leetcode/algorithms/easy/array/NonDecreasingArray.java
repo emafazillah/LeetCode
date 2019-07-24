@@ -20,13 +20,13 @@ public class NonDecreasingArray {
 		}
 		
 		// Collection to Array
-		int[] num = new int[inputs.size()];
+		int[] nums = new int[inputs.size()];
 		for(int i = 0; i < inputs.size(); i++) {
-			num[i] = inputs.get(i);
+			nums[i] = inputs.get(i);
 		}
 		
 		// Check possibility
-		if(checkPossibility(num)) {
+		if(checkPossibility(nums)) {
 			System.out.println("True");
 		} else {
 			System.out.println("False");
@@ -35,26 +35,36 @@ public class NonDecreasingArray {
 		scanner.close();
 	}
 	
-	public static boolean checkPossibility(int[] num) {
-		if(num.length == 0) {
-			return false;
+	public static boolean checkPossibility(int[] nums) {
+		if(nums.length == 0) {
+			return true;
 		} else {
-			if(num.length == 1) {
+			if(nums.length == 1) {
 				return true;
 			} else {
-				for(int i = 0; i < num.length; i++) {
-					int iValue = num[i];
-					if(i + 1 <= num.length) {
-						for(int j = i + 1; j < num.length; j++) {
-							int jValue = num[j];
-							if(iValue < jValue) {
-								return true;
+				int countModified = 0;
+				for(int i = 0; i < nums.length; i++) {
+					int iValue = nums[i];
+					int start = i + 1;
+					if(start < nums.length) {
+						for(int j = start; j < nums.length; j++) {
+							int jValue = nums[j];
+							if(iValue > jValue) {
+								if(countModified > 0) {
+									return false;
+								} else {
+									if(jValue - 1 > 0) {
+										nums[i] = jValue - 1;
+										iValue = nums[i];
+										++countModified;
+									}
+								}
 							}
 						}
 					}
 				}
 				
-				return false;
+				return true;
 			}
 		}
 	}
