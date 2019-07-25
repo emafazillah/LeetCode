@@ -37,13 +37,33 @@ public class MonotonicArray {
 			if(A.length == 1) {
 				return true;
 			} else {
+				int countMonotonicOrder = 0;
+				
+				// Check for ascending order
 				for(int i = 0; i < A.length - 1; i++) {
-					if(A[i] > A[i + 1]) {
-						return false;
+					if(A[i + 1] >= A[i]) {
+						++countMonotonicOrder;
 					}
 				}
 				
-				return true;
+				if(countMonotonicOrder == A.length - 1) {
+					return true;
+				}
+				
+				countMonotonicOrder = 0;
+				
+				// Check for descending order
+				for(int i = 1; i < A.length; i++) {
+					if(A[i - 1] >= A[i]) {
+						++countMonotonicOrder;
+					}
+				}
+				
+				if(countMonotonicOrder == A.length - 1) {
+					return true;
+				}
+				
+				return false;
 			}
 		}
     }
