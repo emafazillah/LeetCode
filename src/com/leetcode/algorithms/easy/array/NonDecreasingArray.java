@@ -44,28 +44,35 @@ public class NonDecreasingArray {
 			} else {
 				int countModified = 0;
 				for(int i = 0; i < nums.length; i++) {
-					int iValue = nums[i];
-					int start = i + 1;
-					if(start < nums.length) {
-						for(int j = start; j < nums.length; j++) {
-							int jValue = nums[j];
-							if(iValue > jValue) {
-								if(countModified > 0) {
-									return false;
+					if(i == 0) {
+						if(nums[i] > nums[i + 1]) {
+							if(countModified > 0) {
+								return false;
+							} else {
+								nums[i] = nums[i + 1];
+								++countModified;
+							}
+						}
+					} else if(i == nums.length - 1) {
+						if(nums[i - 1] > nums[i]) {
+							if(countModified > 0) {
+								return false;
+							} else {
+								nums[i - 1] = nums[i];
+								++countModified;
+							}
+						}
+					} else {
+						if(nums[i] > nums[i + 1]) {
+							if(countModified > 0) {
+								return false;
+							} else {
+								if(nums[i - 1] > nums[i + 1]) {
+									nums[i + 1] = nums[i];
 								} else {
-									if(i == 0) {
-										if(jValue - 1 > 0) {
-											nums[i] = jValue - 1;
-										} else {
-											nums[i] = jValue;
-										}
-										iValue = nums[i];
-									} else {
-										nums[j] = iValue;
-										jValue = nums[j];
-									}
-									++countModified;
+									nums[i] = nums[i - 1];
 								}
+								++countModified;
 							}
 						}
 					}
