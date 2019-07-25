@@ -52,6 +52,9 @@
 	- Valid Perfect Square (Binary Search)
 	- Sqrt(x) (Binary Search)
 	- Search Insert Position (Binary Search)
+	- Non-decreasing Array (Array)
+	- Monotonic Array (Array)
+	- Valid Mountain Array (Array)
   
 ### Medium
 	
