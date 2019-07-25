@@ -34,35 +34,37 @@ public class ValidMountainArray {
 		if(A.length <= 2) {
 			return false;
 		} else {
-			// Define peak point
-			int peak = 0;
-	        if(A.length % 2 == 0) {
-	        	peak = A.length / 2;
-	        } else {
-	        	peak = A.length / 2 + 1;
-	        }
-	        
-	        for(int i = 0; i < A.length; i++) {
-	        	// Left
-	        	if(i < peak - 1) {
-	        		if(A[i] > A[peak - 1]) {
-	    				return false;
-	    			}
-	        	} 
-	        	
-	        	// Right
-	        	else if(i >= peak && i < A.length) {
-	        		// If last point then must lesser than peak value
-	        		if(i == A.length - 1) {
-	        			if(A[peak - 1] <= A[i]) {
-		    				return false;
-		    			}
-	        		} else {
-		        		if(A[peak - 1] < A[i]) {
-		    				return false;
-		    			}
-	        		}
-	        	}	
+			int peak = 0; // Mountain peak
+			int peakPoint = 0; // Mountain peak's point
+			int countPeakPoint = 0; // Count mountain peak's point
+			
+			// Get peak and peak's point
+			for(int i = 1; i < A.length - 1; i++) {
+				if(A[i] > A[i - 1] && A[i] > A[i + 1] && A[i] > peak) {
+					peak = A[i];
+					peakPoint = i;
+					++countPeakPoint;
+				}
+				
+				if(countPeakPoint > 1) {
+					return false;
+				}
+			}
+			
+			// Check if valid
+			for(int i = 0; i < A.length; i++) {
+				// If i is greater than peak's point, then descending order
+				if(i < peakPoint) {
+					if(A[i] > A[i + 1]) {
+						return false;
+					}
+				}
+				// else ascending order
+				else if(i > peakPoint) {
+					if(A[i] > A[i - 1]) {
+						return false;
+					}
+				}
 			}
 			
 			return true;
