@@ -57,6 +57,12 @@ public class ValidMountainArray {
 			
 			// Check if valid
 			for(int i = 0; i < A.length; i++) {
+				if(i < A.length - 1) {
+					if(A[i] == A[i + 1]) {
+						return false;
+					}
+				}
+				
 				// If i is greater than peak's point, then descending order
 				if(i < peakPoint) {
 					if(A[i] > A[i + 1]) {
