@@ -55,6 +55,7 @@
 	- Non-decreasing Array (Array)
 	- Monotonic Array (Array)
 	- Valid Mountain Array (Array)
+	- Univalued Binary Tree (Binary Search)
   
 ### Medium
 	
