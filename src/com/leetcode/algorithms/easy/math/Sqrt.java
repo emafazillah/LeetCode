@@ -1,4 +1,4 @@
-package com.leetcode.algorithms.easy.binarysearch;
+package com.leetcode.algorithms.easy.math;
 
 import java.util.Scanner;
 
