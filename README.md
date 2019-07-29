@@ -57,6 +57,7 @@
 	- Valid Mountain Array (Array)
 	- Univalued Binary Tree (Binary Search)
 	- Invert Binary Tree (Binary Search)
+	- Find Mode in Binary Search Tree (Binary Search)
   
 ### Medium
 	
