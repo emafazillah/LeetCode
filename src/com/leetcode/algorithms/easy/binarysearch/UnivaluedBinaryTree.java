@@ -8,20 +8,17 @@ public class UnivaluedBinaryTree {
 	
 	public static void main(String...strings) {
 		// Insert input into TreeNode
-		List<String> inputs = new ArrayList<>();
-		TreeNode root = null;
 		Scanner scanner = new Scanner(System.in);
-		while(scanner.hasNext()) {
-			String input = scanner.next();
-			if("exit".equals(input)) {
-				break;
-			}
-			
-			inputs.add(input);
-		}
+		String inputs = scanner.next();
+		inputs = inputs.replace("[", "");
+		inputs = inputs.replace("]", "");
+		String[] inputsArray = inputs.split(",");
 		
-		for(int i = 0; i < inputs.size(); i++) {
-			root = insertTreeNode(root, inputs.get(i));
+		TreeNode root = null;
+		for(String input : inputsArray) {
+			if(!"null".equals(input)) {
+				root = insertTreeNode(root, input);
+			}
 		}
 		
 		// Check if TreeNode is unival tree
@@ -32,51 +29,45 @@ public class UnivaluedBinaryTree {
 	
 	static TreeNode insertTreeNode(TreeNode treeNode, String input) {
 		if(treeNode == null) {
-			if(!"null".equals(input)) {
-				treeNode = new TreeNode(Integer.parseInt(input));
+			treeNode = new TreeNode(Integer.parseInt(input));
+		} else {
+			if(treeNode.right == null) {
+				treeNode.right = insertTreeNode(treeNode.right, input);
+			} else {
+				treeNode.left = insertTreeNode(treeNode.left, input);
 			}
-			return treeNode;
-		}
-		
-		if(treeNode.left == null && !"null".equals(input)) {
-			treeNode.left = insertTreeNode(treeNode.left, input);
-		} else if(treeNode.right == null && !"null".equals(input)) {
-			treeNode.right = insertTreeNode(treeNode.right, input);
 		}
 		
 		return treeNode;
 	}
+	
+	static List<Integer> nodeList;
 	
 	public static boolean isUnivalTree(TreeNode root) {
 		if(root == null) {
 			return false;
 		}
 		
-		int val = root.val;
 		boolean result = true;
 		
-		while(root != null) {
-			// Check left
-			if(root.left != null) {
-				if(val > root.left.val || val < root.right.val) {
-					result = false;
-					break;
-				} else {
-					root.left = root.left.left;
-				}
-			} 
-			// Check right
-			else {
-				if(val > root.left.val || val < root.right.val) {
-					result = false;
-					break;
-				} else {
-					root.right = root.right.right;
-				}
+		nodeList = new ArrayList<>();
+		dfs(root);
+		for(int i = 0; i < nodeList.size() - 1; i++) {
+			if(nodeList.get(i) != nodeList.get(i + 1)) {
+				result = false;
+				break;
 			}
 		}
 		
 		return result;
     }
+	
+	public static void dfs(TreeNode node) {
+		if(node != null) {
+			nodeList.add(node.val);
+			dfs(node.left);
+			dfs(node.right);
+		}
+	}
 
 }
