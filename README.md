@@ -56,6 +56,7 @@
 	- Monotonic Array (Array)
 	- Valid Mountain Array (Array)
 	- Univalued Binary Tree (Binary Search)
+	- Invert Binary Tree (Binary Search)
   
 ### Medium
 	
