@@ -1,5 +1,7 @@
 # My Leetcode Submissions
 
+### My Leetcode Submissions in Java [https://leetcode.com](https://leetcode.com)
+
 No | Title | Related Topics | Difficulty | Solution |
 :---:|:---:|:---:|:---:|:---:|
 1. | Jewels and Stones | Divide and Conquer | Easy | [JewelsAndStones.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/easy/divideandconquer/JewelsAndStones.java)
@@ -58,16 +60,13 @@ No | Title | Related Topics | Difficulty | Solution |
 53. | Univalued Binary Tree | Binary Search | Easy | [UnivaluedBinaryTree.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/easy/binarysearch/UnivaluedBinaryTree.java)
 54. | Invert Binary Tree | Binary Search | Easy | [InvertBinarySearch.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/easy/binarysearch/InvertBinarySearch.java)
 55. | Find Mode in Binary Search Tree | Binary Search | Easy | [FindModeInBinarySearchTree.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/easy/binarysearch/FindModeInBinarySearchTree.java)
-  
-### Medium
-	
-	- Max Increase to Keep City Skyline (Array)
-	- Encode and Decode TinyURL (Hash Table)
-	- Reveal Cards In Increasing Order (Array)
-	- Sort an Array (Sort)
-	- Find All Duplicates in an Array (Array)
-	- Single Element in a Sorted Array (Sort)
-	- Remove Duplicates from Sorted Array II (Array)
-	- Capacity To Ship Packages Within D Days (Binary Search)
-	- Kth Smallest Element in a BST (Binary Search)
-	- Time Based Key-Value Store (Binary Search)
+56. | Max Increase to Keep City Skyline | Array | Medium | [MaxIncreaseKeepingSkyline.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/array/MaxIncreaseKeepingSkyline.java)
+57. | Encode and Decode TinyURL | Hash Table | Medium | [Codec.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/hashtable/Codec.java)
+58. | Reveal Cards In Increasing Order | Array | Medium | [RevealCardsInIncreasingOrder.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/array/RevealCardsInIncreasingOrder.java)
+59. | Reveal Cards In Increasing Order | Sort | Medium | [SortAnArray.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/sort/SortAnArray.java)
+60. | Find All Duplicates in an Array | Array | Medium | [FindAllDuplicatesInAnArray.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/array/FindAllDuplicatesInAnArray.java)
+61. | Single Element in a Sorted Array | Sort | Medium | [SingleElementInASortedArray.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/sort/SingleElementInASortedArray.java)
+62. | Remove Duplicates from Sorted Array II | Array | Medium | [RemoveDuplicatesFromSortedArrayII.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/array/RemoveDuplicatesFromSortedArrayII.java)
+63. | Capacity To Ship Packages Within D Days | Binary Search | Medium | [CapacityShipWithinDays.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/binarysearch/CapacityShipWithinDays.java)
+64. | Kth Smallest Element in a BST | Binary Search | Medium | [KthSmallest.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/binarysearch/KthSmallest.java)
+65. | Time Based Key-Value Store | Binary Search | Medium | [TimeMap.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/binarysearch/TimeMap.java)
