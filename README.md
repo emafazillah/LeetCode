@@ -71,3 +71,4 @@ No | Title | Related Topics | Difficulty | Solution |
 64 | Kth Smallest Element in a BST | Binary Search | Medium | [KthSmallest.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/binarysearch/KthSmallest.java) |
 65 | Time Based Key-Value Store | Binary Search | Medium | [TimeMap.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/binarysearch/TimeMap.java) |
 66 | Longest Palindromic Substring | String | Medium | [LongestPalindromicSubstring.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/string/LongestPalindromicSubstring.java) |
+67 | Longest Substring Without Repeating Characters | String | Medium | [LongestSubstring.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/string/LongestSubstring.java) |
