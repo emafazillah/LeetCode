@@ -48,7 +48,7 @@ No | Title | Related Topics | Difficulty | Solution |
 41 | Implement Stack using Queues | Stack | Easy | [ImplementStackUsingQueues.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/easy/stack/ImplementStackUsingQueues.java) |
 42 | Lemonade Change | Queue | Easy | [LemonadeChange.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/easy/queue/LemonadeChange.java) |
 43 | Min Stack | Stack | Easy | [MinimumStack.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/easy/stack/MinimumStack.java) |
-44 | Climbing Stairs | Stack | Easy | [ClimbingStairs.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/easy/stack/ClimbingStairs.java) |
+44 | Climbing Stairs | Dynamic Programming | Easy | [ClimbingStairs.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/easy/dynamicprogramming/ClimbingStairs.java) |
 45 | Binary Search | Binary Search | Easy | [BinarySearch.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/easy/binarysearch/BinarySearch.java) |
 46 | First Bad Version | Binary Search | Easy | [FirstBadVersion.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/easy/binarysearch/FirstBadVersion.java) |
 47 | Valid Perfect Square | Math | Easy | [ValidPerfectSquare.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/easy/math/ValidPerfectSquare.java) |
@@ -73,3 +73,4 @@ No | Title | Related Topics | Difficulty | Solution |
 66 | Longest Palindromic Substring | String | Medium | [LongestPalindromicSubstring.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/string/LongestPalindromicSubstring.java) |
 67 | Longest Substring Without Repeating Characters | String | Medium | [LongestSubstring.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/string/LongestSubstring.java) |
 68 | Find First and Last Position of Element in Sorted Array | Array | Medium | [FirstAndLastIndices.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/array/FirstAndLastIndices.java) |
+69 | Count Primes | Math | Easy | [FirstAndLastIndices.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/math/array/FirstAndLastIndices.java) |
