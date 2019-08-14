@@ -1,4 +1,4 @@
-package com.leetcode.algorithms.easy.stack;
+package com.leetcode.algorithms.easy.dynamicprogramming;
 
 import java.util.Scanner;
 
