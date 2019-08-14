@@ -72,3 +72,4 @@ No | Title | Related Topics | Difficulty | Solution |
 65 | Time Based Key-Value Store | Binary Search | Medium | [TimeMap.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/binarysearch/TimeMap.java) |
 66 | Longest Palindromic Substring | String | Medium | [LongestPalindromicSubstring.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/string/LongestPalindromicSubstring.java) |
 67 | Longest Substring Without Repeating Characters | String | Medium | [LongestSubstring.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/string/LongestSubstring.java) |
+68 | Find First and Last Position of Element in Sorted Array | Array | Medium | [FirstAndLastIndices.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/array/FirstAndLastIndices.java) |
