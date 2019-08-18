@@ -50,7 +50,7 @@ public class WordSearch {
 		// Insert 2D-array into TreeNode
 		for (int i = 0; i < board.length; i++) {
 			for (int j = 0; j < board[i].length; j++) {
-				
+				treeNode = insertTreeNode(treeNode, Character.toString(board[i][j]));
 			}
 		}
         
@@ -58,21 +58,40 @@ public class WordSearch {
 		return false;
     }
 	
-	static void insertTreeNode(TreeNode treeNode, int val) {
+	static TreeNode insertTreeNode(TreeNode treeNode, String val) {
 		if (treeNode == null) {
 			treeNode = new TreeNode(val);
+			return treeNode;
 		}
+		
+		if (treeNode.left != null) {
+			treeNode.left = insertTreeNode(treeNode, val);
+		}
+		
+		if (treeNode.right != null) {
+			treeNode.right = insertTreeNode(treeNode, val);
+		}
+		
+		if (treeNode.top != null) {
+			treeNode.top = insertTreeNode(treeNode, val);
+		}
+		
+		if (treeNode.bottom != null) {
+			treeNode.bottom = insertTreeNode(treeNode, val);
+		}
+		
+		return treeNode; 
 	}
 }
 
 class TreeNode {
-	int val;
+	String val;
 	TreeNode left;
 	TreeNode right;
 	TreeNode top;
 	TreeNode bottom;
 	
-	TreeNode(int x) {
+	TreeNode(String x) {
 		val = x;
 	}
 }

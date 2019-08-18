@@ -68,11 +68,13 @@ No | Title | Related Topics | Difficulty | Solution |
 61 | Single Element in a Sorted Array | Sort | Medium | [SingleElementInASortedArray.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/sort/SingleElementInASortedArray.java) |
 62 | Remove Duplicates from Sorted Array II | Array | Medium | [RemoveDuplicatesFromSortedArrayII.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/array/RemoveDuplicatesFromSortedArrayII.java) |
 63 | Capacity To Ship Packages Within D Days | Binary Search | Medium | [CapacityShipWithinDays.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/binarysearch/CapacityShipWithinDays.java) |
-64 | Kth Smallest Element in a BST | Binary Search | Medium | [KthSmallest.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/binarysearch/KthSmallest.java) |
+64 | Kth Smallest Element in a BST (Attempted) | Binary Search | Medium | [KthSmallest.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/binarysearch/KthSmallest.java) |
 65 | Time Based Key-Value Store | Binary Search | Medium | [TimeMap.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/binarysearch/TimeMap.java) |
-66 | Longest Palindromic Substring | String | Medium | [LongestPalindromicSubstring.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/string/LongestPalindromicSubstring.java) |
+66 | Longest Palindromic Substring (Attempted) | String | Medium | [LongestPalindromicSubstring.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/string/LongestPalindromicSubstring.java) |
 67 | Longest Substring Without Repeating Characters | String | Medium | [LongestSubstring.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/string/LongestSubstring.java) |
 68 | Find First and Last Position of Element in Sorted Array | Array | Medium | [FirstAndLastIndices.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/array/FirstAndLastIndices.java) |
-69 | Count Primes | Math | Easy | [CountPrimes.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/easy/math/CountPrimes.java) |
+69 | Count Primes (Attempted) | Math | Easy | [CountPrimes.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/easy/math/CountPrimes.java) |
 70 | Minimum Size Subarray Sum | Array | Medium | [MinimumSizeSubarraySum.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/array/MinimumSizeSubarraySum.java) |
-71 | Word Search | Array | Medium | [WordSearch.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/array/WordSearch.java) |
+71 | Word Search (TODO) | Array | Medium | [WordSearch.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/array/WordSearch.java) |
+72 | Intersection of Linked Lists | Linked list | Easy | [IntersectionOfTwoLinkedLists.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/easy/linkedlist/IntersectionOfTwoLinkedLists.java) |
+73 | House Robber (Attempted) | Dynamic Programming | Easy | [HouseRobber.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/easy/dynamicprogramming/HouseRobber.java) |
