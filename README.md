@@ -75,3 +75,4 @@ No | Title | Related Topics | Difficulty | Solution |
 68 | Find First and Last Position of Element in Sorted Array | Array | Medium | [FirstAndLastIndices.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/array/FirstAndLastIndices.java) |
 69 | Count Primes | Math | Easy | [CountPrimes.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/easy/math/CountPrimes.java) |
 70 | Minimum Size Subarray Sum | Array | Medium | [MinimumSizeSubarraySum.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/array/MinimumSizeSubarraySum.java) |
+71 | Word Search | Array | Medium | [WordSearch.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/array/WordSearch.java) |
