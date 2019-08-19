@@ -2,20 +2,15 @@ package com.leetcode.algorithms.easy.linkedlist;
 
 import java.util.Scanner;
 
+import com.leetcode.util.InputUtil;
+
 public class IntersectionOfTwoLinkedLists {
 	
 	public static void main(String...strings) {
 		// Input
 		Scanner scanner = new Scanner(System.in);
-		String inputA = scanner.next();
-		inputA = inputA.replace("[", "");
-		inputA = inputA.replace("]", "");
-		String[] listA = inputA.split(",");
-		
-		String inputB = scanner.next();
-		inputB = inputB.replace("[", "");
-		inputB = inputB.replace("]", "");
-		String[] listB = inputB.split(",");
+		String[] listA = InputUtil.inputArr(scanner.next());
+		String[] listB = InputUtil.inputArr(scanner.next());
 		
 		// Input into ListNode
 		ListNode headA = null;
@@ -37,6 +32,7 @@ public class IntersectionOfTwoLinkedLists {
 				System.out.print(interSectinNode.val + "->");
 				interSectinNode = interSectinNode.next;
 			}
+			System.out.print("null");
 		}
 		
 		scanner.close();
