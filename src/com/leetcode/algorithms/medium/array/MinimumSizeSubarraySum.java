@@ -2,6 +2,8 @@ package com.leetcode.algorithms.medium.array;
 
 import java.util.Scanner;
 
+import com.leetcode.util.InputUtil;
+
 public class MinimumSizeSubarraySum {
 	
 	public static void main(String...strings) {
@@ -11,13 +13,16 @@ public class MinimumSizeSubarraySum {
 		int s = scanner.nextInt();
 		
 		// Input to array
-		input = input.replace("[", "");
-		input = input.replace("]", "");
-		String[] inputArr = input.split(",");
-		int[] nums = new int[inputArr.length];
-		for (int i = 0; i < nums.length; i++) {
-			nums[i] = Integer.parseInt(inputArr[i]);
-		}
+//		input = input.replace("[", "");
+//		input = input.replace("]", "");
+//		String[] inputArr = input.split(",");
+//		int[] nums = new int[inputArr.length];
+//		for (int i = 0; i < nums.length; i++) {
+//			nums[i] = Integer.parseInt(inputArr[i]);
+//		}
+		
+		String[] inputs = InputUtil.inputArr(input);
+		int[] nums = InputUtil.integerArr(inputs);
 		
 		// Print output
 		System.out.println(minSubArrayLen(s, nums));

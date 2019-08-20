@@ -1,8 +1,8 @@
 package com.leetcode.algorithms.medium.array;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
+
+import com.leetcode.util.InputUtil;
 
 public class RemoveDuplicatesFromSortedArrayII {
 	
@@ -10,21 +10,24 @@ public class RemoveDuplicatesFromSortedArrayII {
 		Scanner scanner = new Scanner(System.in);
 		
 		// Input
-		List<String> inputs = new ArrayList<>();
-		while(scanner.hasNext()) {
-			String s = scanner.next();
-			if(s.equals("exit")) {
-				break;
-			}
-			inputs.add(s);
-		}
+//		List<String> inputs = new ArrayList<>();
+//		while(scanner.hasNext()) {
+//			String s = scanner.next();
+//			if(s.equals("exit")) {
+//				break;
+//			}
+//			inputs.add(s);
+//		}
 		
 		// Transform collection to array
-		int size = inputs.size();
-		int[] nums = new int[size];
-		for(int i = 0; i < size; i++) {
-			nums[i] = Integer.parseInt(inputs.get(i));
-		}
+//		int size = inputs.size();
+//		int[] nums = new int[size];
+//		for(int i = 0; i < size; i++) {
+//			nums[i] = Integer.parseInt(inputs.get(i));
+//		}
+		
+		String[] inputs = InputUtil.inputArr(scanner.next());
+		int[] nums = InputUtil.integerArr(inputs);
 		
 		int result = removeDuplicates(nums);
 		
