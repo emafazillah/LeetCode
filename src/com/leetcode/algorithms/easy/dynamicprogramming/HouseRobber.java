@@ -6,25 +6,29 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
+import com.leetcode.util.InputUtil;
+
 public class HouseRobber {
 	
 	public static void main(String...strings) {
 		// Input
 		Scanner scanner = new Scanner(System.in);
-		List<Integer> inputs = new ArrayList<>();
-		while(scanner.hasNext()) {
-			int input = scanner.nextInt();
-			if(input <= -1) {
-				break;
-			}
-			inputs.add(input);
-		}
+//		List<Integer> inputs = new ArrayList<>();
+//		while(scanner.hasNext()) {
+//			int input = scanner.nextInt();
+//			if(input <= -1) {
+//				break;
+//			}
+//			inputs.add(input);
+//		}
+		String[] inputs = InputUtil.inputArr(scanner.next());
 		
 		// Collection into array
-		int[] nums = new int[inputs.size()];
-		for(int i = 0; i < inputs.size(); i++) {
-			nums[i] = inputs.get(i);
-		}
+//		int[] nums = new int[inputs.size()];
+//		for(int i = 0; i < inputs.size(); i++) {
+//			nums[i] = inputs.get(i);
+//		}
+		int[] nums = InputUtil.integerArr(inputs);
 		
 		// Output
 		System.out.println(rob(nums));

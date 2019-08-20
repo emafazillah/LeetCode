@@ -5,6 +5,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
+import com.leetcode.util.InputUtil;
+
 public class SearchInABinarySearchTree {
 	
 	private static List<Integer> outputTreeNodeList; // Optional
@@ -15,13 +17,14 @@ public class SearchInABinarySearchTree {
 		// Input
 		Scanner scanner = new Scanner(System.in);
 		String inputTree = scanner.next();
-		inputTree = inputTree.replace("[", "");
-		inputTree = inputTree.replace("]", "");
+//		inputTree = inputTree.replace("[", "");
+//		inputTree = inputTree.replace("]", "");
 		int inputSearch = scanner.nextInt();
 		
 		// Insert into tree
 		TreeNode inputTreeNode = null;
-		String[] inputTreeArray = inputTree.split(",");
+//		String[] inputTreeArray = inputTree.split(",");
+		String[] inputTreeArray = InputUtil.inputArr(inputTree);
 		for(String input : inputTreeArray) {
 			if(!"null".equals(input)) {
 				inputTreeNode = insertTreeNode(inputTreeNode, Integer.parseInt(input));

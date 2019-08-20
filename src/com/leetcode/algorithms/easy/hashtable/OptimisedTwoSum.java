@@ -1,33 +1,34 @@
 package com.leetcode.algorithms.easy.hashtable;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
+
+import com.leetcode.util.InputUtil;
 
 public class OptimisedTwoSum {
 	
 	public static void main(String... args) throws Exception {
 		Scanner scanner = new Scanner(System.in);
 		
-		List<String> inputs = new ArrayList<>();
-		while(scanner.hasNext()) {
-			String s = scanner.next();
-			if(s.equals("exit")) {
-				break;
-			}
-			inputs.add(s);
-		}
+//		List<String> inputs = new ArrayList<>();
+//		while(scanner.hasNext()) {
+//			String s = scanner.next();
+//			if(s.equals("exit")) {
+//				break;
+//			}
+//			inputs.add(s);
+//		}
+		String[] inputs = InputUtil.inputArr(scanner.next());
 		
-		int size = inputs.size();
+		int size = inputs.length;
 		int[] nums = new int[size];
 		int target = 0;
 		for(int i = 0; i < size; i++) {
 			if (i < size - 1) {
-				nums[i] = Integer.parseInt(inputs.get(i));
+				nums[i] = Integer.parseInt(inputs[i]);
 			} else {
-				target = Integer.parseInt(inputs.get(i));
+				target = Integer.parseInt(inputs[i]);
 			}
 		}
 		

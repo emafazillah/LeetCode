@@ -1,8 +1,8 @@
 package com.leetcode.algorithms.easy.binarysearch;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
+
+import com.leetcode.util.InputUtil;
 
 public class SearchInsertPosition {
 
@@ -10,19 +10,20 @@ public class SearchInsertPosition {
 		// Input
 		Scanner scanner = new Scanner(System.in);
 		int target = scanner.nextInt();
-		List<Integer> inputs = new ArrayList<>();
-		while(scanner.hasNext()) {
-			String input = scanner.next();
-			if("exit".equals(input)) {
-				break;
-			}
-			inputs.add(Integer.parseInt(input));
-		}
+//		List<Integer> inputs = new ArrayList<>();
+//		while(scanner.hasNext()) {
+//			String input = scanner.next();
+//			if("exit".equals(input)) {
+//				break;
+//			}
+//			inputs.add(Integer.parseInt(input));
+//		}
+		String[] inputs = InputUtil.inputArr(scanner.next());
 		
 		// Output
-		int[] nums = new int[inputs.size()];
-		for(int i = 0; i < inputs.size(); i++) {
-			nums[i] = inputs.get(i);
+		int[] nums = new int[inputs.length];
+		for(int i = 0; i < inputs.length; i++) {
+			nums[i] = Integer.parseInt(inputs[i]);
 		}
 		
 		System.out.println(searchInsert(nums, target));

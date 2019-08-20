@@ -1,8 +1,8 @@
 package com.leetcode.algorithms.easy.binarysearch;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
+
+import com.leetcode.util.InputUtil;
 
 public class BinarySearch {
 	
@@ -10,20 +10,22 @@ public class BinarySearch {
 		// Input
 		Scanner scanner = new Scanner(System.in);
 		int target = scanner.nextInt();
-		List<Integer> inputs = new ArrayList<>();
-		while(scanner.hasNext()) {
-			String input = scanner.next();
-			if("exit".equals(input)) {
-				break;
-			}
-			inputs.add(Integer.parseInt(input));
-		}
+//		List<Integer> inputs = new ArrayList<>();
+//		while(scanner.hasNext()) {
+//			String input = scanner.next();
+//			if("exit".equals(input)) {
+//				break;
+//			}
+//			inputs.add(Integer.parseInt(input));
+//		}
+		String[] inputs = InputUtil.inputArr(scanner.next());
 		
 		// Convert Collections to Arrays
-		int[] nums = new int[inputs.size()];
-		for(int i = 0; i < inputs.size(); i++) {
-			nums[i] = inputs.get(i);
-		}
+//		int[] nums = new int[inputs.size()];
+//		for(int i = 0; i < inputs.size(); i++) {
+//			nums[i] = inputs.get(i);
+//		}
+		int[] nums = InputUtil.integerArr(inputs);
 		
 		// Output
 		System.out.println(search(nums, target));

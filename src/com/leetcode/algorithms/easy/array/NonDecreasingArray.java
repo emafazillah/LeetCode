@@ -1,29 +1,31 @@
 package com.leetcode.algorithms.easy.array;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
+
+import com.leetcode.util.InputUtil;
 
 public class NonDecreasingArray {
 	
 	public static void main(String...strings) {
 		// Input
 		Scanner scanner = new Scanner(System.in);
-		List<Integer> inputs = new ArrayList<>();
-		while(scanner.hasNext()) {
-			String input = scanner.next();
-			if("exit".equals(input)) {
-				break;
-			}
-			
-			inputs.add(Integer.parseInt(input));
-		}
+//		List<Integer> inputs = new ArrayList<>();
+//		while(scanner.hasNext()) {
+//			String input = scanner.next();
+//			if("exit".equals(input)) {
+//				break;
+//			}
+//			
+//			inputs.add(Integer.parseInt(input));
+//		}
+		String[] inputs = InputUtil.inputArr(scanner.next());
 		
 		// Collection to Array
-		int[] nums = new int[inputs.size()];
-		for(int i = 0; i < inputs.size(); i++) {
-			nums[i] = inputs.get(i);
-		}
+//		int[] nums = new int[inputs.size()];
+//		for(int i = 0; i < inputs.size(); i++) {
+//			nums[i] = inputs.get(i);
+//		}
+		int[] nums = InputUtil.integerArr(inputs);
 		
 		// Check possibility
 		if(checkPossibility(nums)) {

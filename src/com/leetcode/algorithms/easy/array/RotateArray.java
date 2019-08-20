@@ -1,34 +1,35 @@
 package com.leetcode.algorithms.easy.array;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
+
+import com.leetcode.util.InputUtil;
 
 public class RotateArray {
 	
 	public static void main(String...strings) {
 		// Input
 		Scanner scanner = new Scanner(System.in);
-		List<String> inputs = new ArrayList<>();
-		while(scanner.hasNext()) {
-			String s = scanner.next();
-			if(s.equals("exit")) {
-				break;
-			}
-			inputs.add(s);
-		}
+//		List<String> inputs = new ArrayList<>();
+//		while(scanner.hasNext()) {
+//			String s = scanner.next();
+//			if(s.equals("exit")) {
+//				break;
+//			}
+//			inputs.add(s);
+//		}
+		String[] inputs = InputUtil.inputArr(scanner.next());
 		
 		// List to array
-		int[] nums = new int[inputs.size() - 1];
+		int[] nums = new int[inputs.length - 1];
 		int i = 0;
-		while(i < inputs.size() - 1) {
-			nums[i] = Integer.parseInt(inputs.get(i));
+		while(i < inputs.length - 1) {
+			nums[i] = Integer.parseInt(inputs[i]);
 			++i;
 		}
 		
 		// k step
-		int k = Integer.parseInt(inputs.get(inputs.size() - 1));
+		int k = Integer.parseInt(inputs[inputs.length - 1]);
 		
 		// Rotate
 		rotate(nums, k);

@@ -9,25 +9,29 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Scanner;
 
+import com.leetcode.util.InputUtil;
+
 public class MajorityElement {
 	
 	public static void main(String...strings) {
 		// Input
 		Scanner scanner = new Scanner(System.in);
-		List<String> inputs = new ArrayList<>();
-		while(scanner.hasNext()) {
-			String input = scanner.next();
-			if("q".equals(input)) {
-				break;
-			}
-			inputs.add(input);
-		}
+//		List<String> inputs = new ArrayList<>();
+//		while(scanner.hasNext()) {
+//			String input = scanner.next();
+//			if("q".equals(input)) {
+//				break;
+//			}
+//			inputs.add(input);
+//		}
+		String[] inputs = InputUtil.inputArr(scanner.next());
 		
 		// Collection to Array
-		int[] nums = new int[inputs.size()];
-		for(int i = 0; i < inputs.size(); i++) {
-			nums[i] = Integer.parseInt(inputs.get(i));
-		}
+//		int[] nums = new int[inputs.size()];
+//		for(int i = 0; i < inputs.size(); i++) {
+//			nums[i] = Integer.parseInt(inputs.get(i));
+//		}
+		int[] nums = InputUtil.integerArr(inputs);
 		
 		// Print output
 		System.out.println(majorityElement(nums));
