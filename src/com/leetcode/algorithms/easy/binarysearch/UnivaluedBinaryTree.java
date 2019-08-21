@@ -5,16 +5,13 @@ import java.util.List;
 import java.util.Scanner;
 
 import com.leetcode.util.InputUtil;
+import com.leetcode.util.TreeNode;
 
 public class UnivaluedBinaryTree {
 	
 	public static void main(String...strings) {
 		// Insert input into TreeNode
 		Scanner scanner = new Scanner(System.in);
-//		String inputs = scanner.next();
-//		inputs = inputs.replace("[", "");
-//		inputs = inputs.replace("]", "");
-//		String[] inputsArray = inputs.split(",");
 		String[] inputsArray = InputUtil.inputArr(scanner.next());
 		
 		TreeNode root = null;

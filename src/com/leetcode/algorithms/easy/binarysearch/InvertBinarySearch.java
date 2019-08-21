@@ -5,16 +5,13 @@ import java.util.Queue;
 import java.util.Scanner;
 
 import com.leetcode.util.InputUtil;
+import com.leetcode.util.TreeNode;
 
 public class InvertBinarySearch {
 	
 	public static void main(String...strings) {
 		// Insert input into TreeNode
 		Scanner scanner = new Scanner(System.in);
-//		String inputs = scanner.next();
-//		inputs = inputs.replace("[", "");
-//		inputs = inputs.replace("]", "");
-//		String[] inputArr = inputs.split(",");
 		String[] inputArr = InputUtil.inputArr(scanner.next());
 		TreeNode root = null;
 		for(String input : inputArr) {

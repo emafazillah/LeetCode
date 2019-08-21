@@ -9,23 +9,9 @@ public class BinarySearch {
 	public static void main(String...strings) {
 		// Input
 		Scanner scanner = new Scanner(System.in);
-		int target = scanner.nextInt();
-//		List<Integer> inputs = new ArrayList<>();
-//		while(scanner.hasNext()) {
-//			String input = scanner.next();
-//			if("exit".equals(input)) {
-//				break;
-//			}
-//			inputs.add(Integer.parseInt(input));
-//		}
 		String[] inputs = InputUtil.inputArr(scanner.next());
-		
-		// Convert Collections to Arrays
-//		int[] nums = new int[inputs.size()];
-//		for(int i = 0; i < inputs.size(); i++) {
-//			nums[i] = inputs.get(i);
-//		}
 		int[] nums = InputUtil.integerArr(inputs);
+		int target = scanner.nextInt();
 		
 		// Output
 		System.out.println(search(nums, target));

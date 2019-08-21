@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import com.leetcode.util.InputUtil;
+import com.leetcode.util.TreeNode;
 
 public class SearchInABinarySearchTree {
 	
@@ -17,13 +18,10 @@ public class SearchInABinarySearchTree {
 		// Input
 		Scanner scanner = new Scanner(System.in);
 		String inputTree = scanner.next();
-//		inputTree = inputTree.replace("[", "");
-//		inputTree = inputTree.replace("]", "");
 		int inputSearch = scanner.nextInt();
 		
 		// Insert into tree
 		TreeNode inputTreeNode = null;
-//		String[] inputTreeArray = inputTree.split(",");
 		String[] inputTreeArray = InputUtil.inputArr(inputTree);
 		for(String input : inputTreeArray) {
 			if(!"null".equals(input)) {
@@ -85,11 +83,4 @@ public class SearchInABinarySearchTree {
         }
     }
 	
-}
-
-class TreeNode {
-	int val;
-	TreeNode left;
-	TreeNode right;
-	TreeNode(int x) { val = x; }
 }

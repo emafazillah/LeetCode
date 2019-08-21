@@ -9,22 +9,10 @@ public class SearchInsertPosition {
 	public static void main(String...strings) {
 		// Input
 		Scanner scanner = new Scanner(System.in);
-		int target = scanner.nextInt();
-//		List<Integer> inputs = new ArrayList<>();
-//		while(scanner.hasNext()) {
-//			String input = scanner.next();
-//			if("exit".equals(input)) {
-//				break;
-//			}
-//			inputs.add(Integer.parseInt(input));
-//		}
 		String[] inputs = InputUtil.inputArr(scanner.next());
+		int[] nums = InputUtil.integerArr(inputs);
 		
-		// Output
-		int[] nums = new int[inputs.length];
-		for(int i = 0; i < inputs.length; i++) {
-			nums[i] = Integer.parseInt(inputs[i]);
-		}
+		int target = scanner.nextInt();
 		
 		System.out.println(searchInsert(nums, target));
 		
