@@ -9,21 +9,7 @@ public class MonotonicArray {
 	public static void main(String...strings) {
 		// Input
 		Scanner scanner = new Scanner(System.in);
-//		List<Integer> inputs = new ArrayList<>();
-//		while(scanner.hasNext()) {
-//			String input = scanner.next();
-//			if("exit".equals(input)) {
-//				break;
-//			}
-//			inputs.add(Integer.parseInt(input));
-//		}
 		String[] inputs = InputUtil.inputArr(scanner.next());
-		
-		// Collection to Array
-//		int[] A = new int[inputs.size()];
-//		for(int i = 0; i < A.length; i++) {
-//			A[i] = inputs.get(i);
-//		}
 		int[] A = InputUtil.integerArr(inputs);
 		
 		// Check if array is monotonic

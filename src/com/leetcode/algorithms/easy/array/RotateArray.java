@@ -10,26 +10,11 @@ public class RotateArray {
 	public static void main(String...strings) {
 		// Input
 		Scanner scanner = new Scanner(System.in);
-//		List<String> inputs = new ArrayList<>();
-//		while(scanner.hasNext()) {
-//			String s = scanner.next();
-//			if(s.equals("exit")) {
-//				break;
-//			}
-//			inputs.add(s);
-//		}
 		String[] inputs = InputUtil.inputArr(scanner.next());
-		
-		// List to array
-		int[] nums = new int[inputs.length - 1];
-		int i = 0;
-		while(i < inputs.length - 1) {
-			nums[i] = Integer.parseInt(inputs[i]);
-			++i;
-		}
+		int[] nums = InputUtil.integerArr(inputs);
 		
 		// k step
-		int k = Integer.parseInt(inputs[inputs.length - 1]);
+		int k = scanner.nextInt();
 		
 		// Rotate
 		rotate(nums, k);

@@ -14,21 +14,6 @@ public class FindCommonCharacters {
 	public static void main(String...strings) {
 		// Input
 		Scanner scanner = new Scanner(System.in);
-//		List<String> inputs = new ArrayList<>();
-//		while(scanner.hasNext()) {
-//			String input = scanner.next();
-//			if("exit".equals(input)) {
-//				break;
-//			}
-//			inputs.add(input);
-//		}
-		
-		// Collection to Array
-//		String[] A = new String[inputs.size()];
-//		for(int i = 0; i < A.length; i++) {
-//			A[i] = inputs.get(i);
-//		}
-		
 		String[] A = InputUtil.inputArr(scanner.next());
 		
 		// Output

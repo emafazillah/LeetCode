@@ -17,22 +17,7 @@ public class PeakIndexInAMountainArray {
 	public static void main(String...strings) {
 		// Input
 		Scanner scanner = new Scanner(System.in);
-//		List<Integer> inputs = new ArrayList<>();
-//		while(scanner.hasNext()) {
-//			int input = scanner.nextInt();
-//			if(input == -1) {
-//				break;
-//			}
-//			
-//			inputs.add(input);
-//		}
 		String[] inputs = InputUtil.inputArr(scanner.next());
-		
-		// Collection to array
-//		int[] A = new int[inputs.size()];
-//		for(int i = 0; i < inputs.size(); i++) {
-//			A[i] = inputs.get(i);
-//		}
 		int[] A = InputUtil.integerArr(inputs);
 		
 		// Output
