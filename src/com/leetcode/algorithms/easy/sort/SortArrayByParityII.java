@@ -1,30 +1,17 @@
 package com.leetcode.algorithms.easy.sort;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
+
+import com.leetcode.util.InputUtil;
 
 public class SortArrayByParityII {
 	
 	public static void main(String...strings) {
 		// Input
-		Scanner scanner = new Scanner(System.in);
-		List<String> inputs = new ArrayList<>();
-		while(scanner.hasNext()) {
-			String input = scanner.next();
-			if("exit".equals(input)) {
-				break;
-			}
-			
-			inputs.add(input);
-		}
-		
-		// Convert Collection into Array
-		int[] A = new int[inputs.size()];
-		for(int i = 0; i < A.length; i++) {
-			A[i] = Integer.parseInt(inputs.get(i));
-		}
+		Scanner scanner = new Scanner(System.in);		
+		String[] inputs = InputUtil.inputArr(scanner.next());
+		int[] A = InputUtil.integerArr(inputs);
 		
 		// Print output
 		System.out.println(Arrays.toString(sortArrayByParityII(A)));
