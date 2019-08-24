@@ -63,7 +63,7 @@ No | Title | Difficulty | Related Topics | Solution |
 56 | Max Increase to Keep City Skyline | Medium | Array | [MaxIncreaseKeepingSkyline.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/array/MaxIncreaseKeepingSkyline.java) |
 57 | Encode and Decode TinyURL | Medium | Hash Table | [Codec.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/hashtable/Codec.java) |
 58 | Reveal Cards In Increasing Order | Medium | Array | [RevealCardsInIncreasingOrder.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/array/RevealCardsInIncreasingOrder.java) |
-59 | Reveal Cards In Increasing Order | Medium | Sort | [SortAnArray.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/sort/SortAnArray.java) |
+59 | Sort an Array | Medium | Sort | [SortAnArray.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/sort/SortAnArray.java) |
 60 | Find All Duplicates in an Array | Medium | Array | [FindAllDuplicatesInAnArray.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/array/FindAllDuplicatesInAnArray.java) |
 61 | Single Element in a Sorted Array | Medium | Sort | [SingleElementInASortedArray.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/sort/SingleElementInASortedArray.java) |
 62 | Remove Duplicates from Sorted Array II | Medium | Array | [RemoveDuplicatesFromSortedArrayII.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/array/RemoveDuplicatesFromSortedArrayII.java) |

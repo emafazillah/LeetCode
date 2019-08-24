@@ -10,25 +10,11 @@ public class LemonadeChange {
 	
 	public static void main(String...strings) {
 		// Input
-		Scanner scanner = new Scanner(System.in);
-//		List<Integer> inputs = new ArrayList<>();
-//		while(scanner.hasNext()) {
-//			String input = scanner.next();
-//			if("exit".equals(input)) {
-//				break;
-//			}
-//			inputs.add(Integer.parseInt(input));
-//		}
-		
-		// Output
-//		int[] bills = new int[inputs.size()];
-//		for(int i = 0; i < inputs.size(); i++) {
-//			bills[i] = inputs.get(i);
-//		}
-		
+		Scanner scanner = new Scanner(System.in);		
 		String[] inputs = InputUtil.inputArr(scanner.next());
 		int[] bills = InputUtil.integerArr(inputs);
 		
+		// Output
 		System.out.println(lemonadeChange(bills));
 		
 		scanner.close();
