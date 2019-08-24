@@ -11,16 +11,6 @@ public class MinimumSizeSubarraySum {
 		Scanner scanner = new Scanner(System.in);
 		String input = scanner.next();
 		int s = scanner.nextInt();
-		
-		// Input to array
-//		input = input.replace("[", "");
-//		input = input.replace("]", "");
-//		String[] inputArr = input.split(",");
-//		int[] nums = new int[inputArr.length];
-//		for (int i = 0; i < nums.length; i++) {
-//			nums[i] = Integer.parseInt(inputArr[i]);
-//		}
-		
 		String[] inputs = InputUtil.inputArr(input);
 		int[] nums = InputUtil.integerArr(inputs);
 		

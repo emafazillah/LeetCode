@@ -14,22 +14,6 @@ public class FindAllDuplicatesInAnArray {
 	public static void main(String...strings) {
 		// Input
 		Scanner scanner = new Scanner(System.in);
-//		List<String> inputs = new ArrayList<>();
-//		while(scanner.hasNext()) {
-//			String s = scanner.next();
-//			if(s.equals("exit")) {
-//				break;
-//			}
-//			inputs.add(s);
-//		}
-		
-		// Transform collection into array
-//		int size = inputs.size();
-//		int[] nums = new int[size];
-//		for(int i = 0; i < size; i++) {
-//			nums[i] = Integer.parseInt(inputs.get(i));
-//		}
-		
 		String[] inputs = InputUtil.inputArr(scanner.next());
 		int[] nums = InputUtil.integerArr(inputs);
 		List<Integer> collResult = findDuplicates(nums);
