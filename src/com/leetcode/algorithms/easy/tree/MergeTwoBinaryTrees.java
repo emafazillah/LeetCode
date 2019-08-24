@@ -5,6 +5,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
+import com.leetcode.util.InputUtil;
+
 public class MergeTwoBinaryTrees {
 	
 	private static List<Integer> mergedTreeNodes;
@@ -15,16 +17,8 @@ public class MergeTwoBinaryTrees {
 		// Input
 		Scanner scanner = new Scanner(System.in);
 		
-		String input1 = scanner.next();
-		input1 = input1.replace("[", "");
-		input1 = input1.replace("]", "");
-		
-		String input2 = scanner.next();
-		input2 = input2.replace("[", "");
-		input2 = input2.replace("]", "");
-		
-		// TreeNode, t1
-		String[] arrInput1 = input1.split(",");
+		// TreeNode, t1		
+		String[] arrInput1 = InputUtil.inputArr(scanner.next());
 		
 		TreeNodeMerged t1 = null;
 		for(String input : arrInput1) {
@@ -34,7 +28,7 @@ public class MergeTwoBinaryTrees {
 		}
 		
 		// TreeNode, t2
-		String[] arrInput2 = input2.split(",");
+		String[] arrInput2 = InputUtil.inputArr(scanner.next());
 		
 		TreeNodeMerged t2 = null;
 		for(String input : arrInput2) {

@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import com.google.gson.Gson;
+import com.leetcode.util.Node;
 
 public class NAryTreePreorderTraversal {
 	
@@ -23,30 +24,6 @@ public class NAryTreePreorderTraversal {
 		
 		scanner.close();
 	}
-	
-//	static List<Integer> preorder(Node root) {
-//		List<Integer> result = new ArrayList<>();
-//		
-//		// root
-//		if(root != null) {
-//			result.add(root.val);
-//		}
-//		
-//		// If root has children
-//		if(!root.children.isEmpty()) {
-//			for(Node node : root.children) {
-//				result.add(node.val);
-//				
-//				if(!node.children.isEmpty()) {
-//					for(Node n : node.children) {
-//						result.add(n.val);
-//					}
-//				}
-//			}
-//		}
-//		
-//		return result;
-//    }
 	
 	static List<Integer> preorder(Node root) {
 		ArrayList<Integer> list = new ArrayList<>();
@@ -68,16 +45,4 @@ public class NAryTreePreorderTraversal {
 		return list;
 	}
 
-}
-
-class Node {
-    public int val;
-    public List<Node> children;
-
-    public Node() {}
-
-    public Node(int _val, List<Node> _children) {
-        val = _val;
-        children = _children;
-    }
 }

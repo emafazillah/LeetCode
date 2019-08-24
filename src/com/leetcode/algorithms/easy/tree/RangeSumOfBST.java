@@ -2,6 +2,8 @@ package com.leetcode.algorithms.easy.tree;
 
 import java.util.Scanner;
 
+import com.leetcode.util.TreeNode;
+
 public class RangeSumOfBST {
 	
 	public static void main(String...strings) {
@@ -9,7 +11,7 @@ public class RangeSumOfBST {
 		Scanner scanner = new Scanner(System.in);
 		int L = scanner.nextInt();
 		int R = scanner.nextInt();
-		TreeNodeRangeSumOfBST root = null;
+		TreeNode root = null;
 		while(scanner.hasNext()) {
 			String input = scanner.next();
 			
@@ -28,9 +30,9 @@ public class RangeSumOfBST {
 		scanner.close();
 	}
 	
-	static TreeNodeRangeSumOfBST insertTreeNode(TreeNodeRangeSumOfBST root, int val) {
+	static TreeNode insertTreeNode(TreeNode root, int val) {
 		if(root == null) {
-			root = new TreeNodeRangeSumOfBST(val);
+			root = new TreeNode(val);
 			return root;
 		}
 		
@@ -43,7 +45,7 @@ public class RangeSumOfBST {
 		return root;
 	}
 	
-	static int rangeSumBST(TreeNodeRangeSumOfBST root, int L, int R) {
+	static int rangeSumBST(TreeNode root, int L, int R) {
 		if(root == null) {
 			return 0;
 		}
@@ -57,12 +59,4 @@ public class RangeSumOfBST {
 		return root.val + rangeSumBST(root.right, L, R) + rangeSumBST(root.left, L, R);
     }
 	
-}
-
-// Definition for a binary tree node.
-class TreeNodeRangeSumOfBST {
-	int val;
-    TreeNodeRangeSumOfBST left;
-    TreeNodeRangeSumOfBST right;
-    TreeNodeRangeSumOfBST(int x) { val = x; }
 }
