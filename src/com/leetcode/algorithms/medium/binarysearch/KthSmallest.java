@@ -2,6 +2,8 @@ package com.leetcode.algorithms.medium.binarysearch;
 
 import java.util.Scanner;
 
+import com.leetcode.util.TreeNode;
+
 public class KthSmallest {
 	
 	static int count = 0;
@@ -61,11 +63,4 @@ public class KthSmallest {
 		scanner.close();
 	}
 
-}
-
-class TreeNode {
-	int val;
-	TreeNode left;
-	TreeNode right;
-	TreeNode(int x) { val = x; }
 }

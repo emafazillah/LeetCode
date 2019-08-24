@@ -10,25 +10,10 @@ public class CapacityShipWithinDays {
 		// Input
 		Scanner scanner = new Scanner(System.in);
 		int D = scanner.nextInt();
-//		List<Integer> inputs = new ArrayList<>();
-//		while(scanner.hasNext()) {
-//			String input = scanner.next();
-//			if("exit".equals(input)) {
-//				break;
-//			}
-//			
-//			inputs.add(Integer.parseInt(input));
-//		}
-		
-		// Output
-//		int[] weights = new int[inputs.size()];
-//		for(int i = 0; i < inputs.size(); i++) {
-//			weights[i] = inputs.get(i);
-//		}
-		
 		String[] inputs = InputUtil.inputArr(scanner.next());
 		int[] weights = InputUtil.integerArr(inputs);
 		
+		// Print output
 		System.out.println(shipWithinDays(weights, D));
 		
 		scanner.close();
