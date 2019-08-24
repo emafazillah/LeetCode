@@ -3,6 +3,7 @@ package com.leetcode.algorithms.easy.linkedlist;
 import java.util.Scanner;
 
 import com.leetcode.util.InputUtil;
+import com.leetcode.util.ListNode;
 
 public class IntersectionOfTwoLinkedLists {
 	
@@ -78,14 +79,4 @@ public class IntersectionOfTwoLinkedLists {
 		return listNode; 
 	}
 
-}
-
-class ListNode {
-	int val;
-	ListNode next;
-	
-	ListNode(int x) {
-		val = x;
-		next = null;
-	}
 }

@@ -1,35 +1,23 @@
 package com.leetcode.algorithms.easy.linkedlist;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
+
+import com.leetcode.util.InputUtil;
+import com.leetcode.util.ListNode;
 
 public class ReverseLinkedList {
 	
 	public static void main(String...strings) {
 		// Input
 		Scanner scanner = new Scanner(System.in);
-		List<String> inputs = new ArrayList<>();
-		while(scanner.hasNext()) {
-			String s = scanner.next();
-			if(s.equals("exit")) {
-				break;
-			}
-			inputs.add(s);
-		}
-		
-		// Transform input list into node
-		ListNode node = new ListNode(Integer.parseInt(inputs.get(inputs.size() - 1)));
-		int count = inputs.size() - 2;
-		while(count > -1) {
-			ListNode temp = node;
-			node = new ListNode(Integer.parseInt(inputs.get(count)));
-			node.next = temp;
-			--count;
-		}
-		
+		String[] inputs = InputUtil.inputArr(scanner.next());
+		ListNode listNode = null;
+		for (int i = 0; i < inputs.length; i++) {
+			listNode = insertNodeList(listNode, Integer.parseInt(inputs[i]));
+		}		
+				
 		// Print output
-		ListNode output = reverseList(node);
+		ListNode output = reverseList(listNode);
 		while(output.next != null) {
 			System.out.println(output.val);
 			output = output.next;
@@ -39,24 +27,17 @@ public class ReverseLinkedList {
 		scanner.close();
 	}
 	
-	/**
-	 * Definition for singly-linked list.
-	 * public class ListNode {
-	 *     int val;
-	 *     ListNode next;
-	 *     ListNode(int x) { val = x; }
-	 * }
-	 */
-	public static class ListNode {
-		int val;
-	    ListNode next;
-	    
-	    ListNode(int x) { 
-	    	val = x; 
-	    }
+	static ListNode insertNodeList(ListNode listNode, int val) {
+		if (listNode == null) {
+			listNode = new ListNode(val);
+		} else {
+			listNode.next = insertNodeList(listNode.next, val);
+		}
+		
+		return listNode;
 	}
 	
-	public static ListNode reverseList(ListNode head) {
+	static ListNode reverseList(ListNode head) {
 		if(head == null) {
 			return null;
 		}

@@ -1,56 +1,38 @@
 package com.leetcode.algorithms.easy.linkedlist;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
+
+import com.leetcode.util.InputUtil;
+import com.leetcode.util.ListNode;
 
 public class MiddleOfTheLinkedList {
 	
 	public static void main(String...strings) {
 		// Input
-		Scanner scanner = new Scanner(System.in);
-		List<String> inputs = new ArrayList<>();
-		while(scanner.hasNext()) {
-			String s = scanner.next();
-			if(s.equals("exit")) {
-				break;
-			}
-			inputs.add(s);
+		Scanner scanner = new Scanner(System.in);		
+		String[] inputs = InputUtil.inputArr(scanner.next());
+		ListNode listNode = null;
+		for (int i = 0; i < inputs.length; i++) {
+			listNode = insertListNode(listNode, Integer.parseInt(inputs[i]));
 		}
 		
-		// Transform input list into node
-		ListNode node = new ListNode(Integer.parseInt(inputs.get(inputs.size() - 1)));
-		int count = inputs.size() - 2;
-		while(count > -1) {
-			ListNode temp = node;
-			node = new ListNode(Integer.parseInt(inputs.get(count)));
-			node.next = temp;
-			--count;
-		}
-		
-		System.out.println(middleNode(node).val);
+		// Output
+		System.out.println(middleNode(listNode).val);
 		
 		scanner.close();
 	}
 	
-	/**
-	 * Definition for singly-linked list.
-	 * public class ListNode {
-	 *     int val;
-	 *     ListNode next;
-	 *     ListNode(int x) { val = x; }
-	 * }
-	 */
-	public static class ListNode {
-		int val;
-	    ListNode next;
-	    
-	    ListNode(int x) { 
-	    	val = x; 
-	    }
+	static ListNode insertListNode(ListNode listNode, int val) {
+		if (listNode == null) {
+			listNode = new ListNode(val);
+		} else {
+			listNode.next = insertListNode(listNode.next, val);
+		}
+		
+		return listNode;
 	}
 	
-	public static ListNode middleNode(ListNode head) {
+	static ListNode middleNode(ListNode head) {
 		// If head is null
         if (head == null) {
         	return null;
