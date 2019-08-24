@@ -10,23 +10,10 @@ public class SortAnArray {
 	public static void main(String...strings) {
 		// Input
 		Scanner scanner = new Scanner(System.in);
-//		List<Integer> inputs = new ArrayList<>();
-//		while(scanner.hasNext()) {
-//			String input = scanner.next();
-//			if("exit".equals(input)) {
-//				break;
-//			}
-//			inputs.add(Integer.parseInt(input));
-//		}
-		
-		// Sort
-//		int[] nums = new int[inputs.size()];
-//		for(int i = 0; i < nums.length; i++) {
-//			nums[i] = inputs.get(i);
-//		}
-		
 		String[] inputs = InputUtil.inputArr(scanner.next());
 		int[] nums = InputUtil.integerArr(inputs);
+		
+		// Print output
 		System.out.println(Arrays.toString(sortArray(nums)));
 		
 		scanner.close();
