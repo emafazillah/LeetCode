@@ -1,40 +1,23 @@
 package com.leetcode.algorithms.easy.twopointers;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
 import java.util.Scanner;
+
+import com.leetcode.util.InputUtil;
 
 public class TwoSum {
 	
 	public static void main(String... args) {
+		// Input
 		Scanner scanner = new Scanner(System.in);
+		String[] inputs = InputUtil.inputArr(scanner.next());
+		int[] nums = InputUtil.integerArr(inputs);
+		int target = scanner.nextInt();
 		
-		List<String> inputs = new ArrayList<>();
-		while(scanner.hasNext()) {
-			String s = scanner.next();
-			if(s.equals("exit")) {
-				break;
-			}
-			inputs.add(s);
-		}
-		
-		int size = inputs.size();
-		int[] nums = new int[size];
-		int target = 0;
-		for(int i = 0; i < size; i++) {
-			if (i < size - 1) {
-				nums[i] = Integer.parseInt(inputs.get(i));
-			} else {
-				target = Integer.parseInt(inputs.get(i));
-			}
-		}
-		
-		String strResult = "";
 		int[] result = twoSum(nums, target);
-		for(int r : result) {
-			strResult += Integer.toString(r) + " ";
-		}
-		System.out.print(strResult.trim());
+		
+		// Print output
+		System.out.print(Arrays.toString(result));;
 		
 		scanner.close();
 	}
