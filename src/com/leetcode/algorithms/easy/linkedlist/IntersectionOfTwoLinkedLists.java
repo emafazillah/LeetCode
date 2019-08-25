@@ -10,22 +10,14 @@ public class IntersectionOfTwoLinkedLists {
 	public static void main(String...strings) {
 		// Input
 		Scanner scanner = new Scanner(System.in);
-		String[] listA = InputUtil.inputArr(scanner.next());
-		String[] listB = InputUtil.inputArr(scanner.next());
-		
-		// Input into ListNode
-		ListNode headA = null;
-		for (String a : listA) {
-			headA = insertListNode(headA, Integer.parseInt(a));
-		}
-		
-		ListNode headB = null;
-		for (String b : listB) {
-			headB = insertListNode(headB, Integer.parseInt(b));
-		}
+		int intersectionVal = scanner.nextInt();
+		ListNode headA = stringToListNode(scanner.next());		
+		ListNode headB = stringToListNode(scanner.next());
+		int skipA = scanner.nextInt();
+		int skipB = scanner.nextInt();
 		
 		// Print output
-		ListNode interSectinNode = getIntersectionNode(headA, headB);
+		ListNode interSectinNode = getIntersectionNode(intersectionVal, headA, headB, skipA, skipB);
 		if (interSectinNode == null) {
 			System.out.println("null");
 		} else {
@@ -39,35 +31,58 @@ public class IntersectionOfTwoLinkedLists {
 		scanner.close();
 	}
 	
-	static ListNode getIntersectionNode(ListNode headA, ListNode headB) {
-        StringBuffer headASb = new StringBuffer();
-        while (headA != null) {
-        	headASb.append(headA.val);
-        	headA = headA.next;
-        }
-		
-		StringBuffer headBSb = new StringBuffer();
-		while (headB != null) {
-			headBSb.append(headB.val);
-			headB = headB.next;
-		}
+	static ListNode getIntersectionNode(int intersectionVal, ListNode headA, ListNode headB, int skipA, int skipB) {
+        StringBuilder headAStrBldr = listNodeToStringBuilder(headA);
+        StringBuilder headBStrBldr = listNodeToStringBuilder(headB);
 		
 		ListNode intersection = null;
-		for (int i = 0; i < headASb.toString().length() - 1; i++) {
-			String subStrA = headASb.toString().substring(i, headASb.toString().length());
-			// Check if substring of headASb contains in headBSb
-			if (headBSb.toString().contains(subStrA)) {
-				// Insert into ListNode, intersection
-				char[] subStrAchar = subStrA.toCharArray();
-				for(char c : subStrAchar) {
-					intersection = insertListNode(intersection, Integer.parseInt(Character.toString(c)));
+		for (int i = 0; i < headAStrBldr.toString().length(); i++) {
+			for (int j = 1; j < headAStrBldr.toString().length(); j++) {
+				// Left substring
+				String leftSubstring = headAStrBldr.toString().substring(i, headAStrBldr.toString().length() - j);
+				if (headBStrBldr.toString().contains(leftSubstring)) {
+					// Insert into ListNode, intersection
+					char[] chars = leftSubstring.toCharArray();
+					for(char c : chars) {
+						intersection = insertListNode(intersection, Integer.parseInt(Character.toString(c)));
+					}
+					return intersection;
 				}
-				break;
+				
+				// Right substring
+				String rightSubstring = headAStrBldr.toString().substring(j - i, headAStrBldr.toString().length());
+				if (headBStrBldr.toString().contains(rightSubstring)) {
+					// Insert into ListNode, intersection
+					char[] chars = rightSubstring.toCharArray();
+					for(char c : chars) {
+						intersection = insertListNode(intersection, Integer.parseInt(Character.toString(c)));
+					}
+					return intersection;
+				}					
 			}
 		}
 		
 		return intersection;
     }
+	
+	static StringBuilder listNodeToStringBuilder(ListNode head) {
+		StringBuilder sb = new StringBuilder();
+        while (head != null) {
+        	sb.append(head.val);
+        	head = head.next;
+        }
+        return sb;
+	}
+	
+	static ListNode stringToListNode(String input) {
+		String[] list = InputUtil.inputArr(input);
+		// Input into ListNode
+		ListNode head = null;
+		for (String s : list) {
+			head = insertListNode(head, Integer.parseInt(s));
+		}
+		return head;
+	}
 	
 	static ListNode insertListNode(ListNode listNode, int val) {
 		if (listNode == null) {
@@ -75,7 +90,6 @@ public class IntersectionOfTwoLinkedLists {
 		} else {
 			listNode.next = insertListNode(listNode.next, val);
 		}
-		
 		return listNode; 
 	}
 
