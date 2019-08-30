@@ -82,3 +82,4 @@ No | Title | Difficulty | Related Topics | Solution |
 75 | Time Based Key-Value Store (TODO) | Medium | Binary Search | [TimeMap.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/array/TimeMap.java) |
 76 | Find Mode In Binary Search Tree (TODO) | Easy | Binary Search | [FindModeInBinarySearchTree.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/easy/binarysearch/FindModeInBinarySearchTree.java) |
 77 | Kth Largest Element in an Array | Medium | Heap | [KthLargestElementInAList.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/heap/KthLargestElementInAList.java) |
+78 | Remove Nth Node From End of List | Medium | Linked List | [KthLargestElementInAList.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/linkedlist/KthLargestElementInAList.java) |
