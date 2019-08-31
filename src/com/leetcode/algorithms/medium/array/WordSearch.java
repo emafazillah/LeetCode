@@ -7,6 +7,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
+import com.leetcode.util.InputUtil;
+
 public class WordSearch {
 	
 	public static void main(String...strings) {
@@ -25,11 +27,8 @@ public class WordSearch {
 		// Input into 2D-array
 		Map<Integer, List<String>> map = new HashMap<>(); 
 		for (int i = 0; i < inputs.size(); i++) {
-			String input = inputs.get(i);
-			input = input.replace("[", "");
-			input = input.replace("]", "");
-			String[] split = input.split(",");
-			map.put(i, Arrays.asList(split));
+			String[] inputArr = InputUtil.inputArr(inputs.get(i));
+			map.put(i, Arrays.asList(inputArr));
 		}
 		
 		char[][] board = new char[map.size()][map.get(0).size()];
@@ -46,52 +45,47 @@ public class WordSearch {
 	}
 
 	static boolean exist(char[][] board, String word) {
-		TreeNode treeNode = null;
-		// Insert 2D-array into TreeNode
-		for (int i = 0; i < board.length; i++) {
-			for (int j = 0; j < board[i].length; j++) {
-				treeNode = insertTreeNode(treeNode, Character.toString(board[i][j]));
+		// Map of character of word and character location
+		Map<Character, String> map = new HashMap<>();
+		
+		char[] charWord = word.toCharArray();
+		int idx = 0;
+		int count = 0;
+		int i = 0;
+		while (i < board.length) {
+			int j = 0;
+			while (j < board[i].length) {
+				char b = board[i][j];
+				if (idx < charWord.length && charWord[idx] == b) {
+					if (map.isEmpty()) { // first character found then insert
+						map.put(charWord[idx], Integer.toString(i) + "," + Integer.toString(j));
+						++idx;
+						++count;
+					} else {
+						String[] location = map.get(charWord[idx - 1]).split(",");
+						int prevI = Integer.parseInt(location[0]);
+						int prevJ = Integer.parseInt(location[1]);
+						if (Math.abs(i - prevI) == 1 || Math.abs(j - prevJ) == 1) {
+							map.put(charWord[idx], Integer.toString(i) + "," + Integer.toString(j));
+							++idx;
+							++count;
+						} else {
+							return false;
+						}
+					}
+				}
+				
+				++j;
 			}
+			
+			++i;
+		}
+		
+		if (count != charWord.length) {
+			return false;
 		}
         
-		// TODO
-		return false;
+		return true;
     }
 	
-	static TreeNode insertTreeNode(TreeNode treeNode, String val) {
-		if (treeNode == null) {
-			treeNode = new TreeNode(val);
-			return treeNode;
-		}
-		
-		if (treeNode.left != null) {
-			treeNode.left = insertTreeNode(treeNode, val);
-		}
-		
-		if (treeNode.right != null) {
-			treeNode.right = insertTreeNode(treeNode, val);
-		}
-		
-		if (treeNode.top != null) {
-			treeNode.top = insertTreeNode(treeNode, val);
-		}
-		
-		if (treeNode.bottom != null) {
-			treeNode.bottom = insertTreeNode(treeNode, val);
-		}
-		
-		return treeNode; 
-	}
-}
-
-class TreeNode {
-	String val;
-	TreeNode left;
-	TreeNode right;
-	TreeNode top;
-	TreeNode bottom;
-	
-	TreeNode(String x) {
-		val = x;
-	}
 }
