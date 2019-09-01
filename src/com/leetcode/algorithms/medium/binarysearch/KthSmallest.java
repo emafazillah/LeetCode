@@ -1,32 +1,32 @@
 package com.leetcode.algorithms.medium.binarysearch;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
+import com.leetcode.util.InputUtil;
 import com.leetcode.util.TreeNode;
 
 public class KthSmallest {
 	
-	static int count = 0;
-	
-	public static int kthSmallest(TreeNode root, int k) {
-        if(root == null) {
-        	return 0;
-        }
-        
-        if(root.left != null) {
-        	return kthSmallest(root.left, k);
-        }
-        
-        ++count;
-        
-        if(count == k) {
-        	return root.val;
-        }
-        
-        return kthSmallest(root.right, k);
+	static int kthSmallest(TreeNode root, int k) {
+		List<Integer> list = treeNodeToSortedList(root, new ArrayList<>());
+		return list.get(k - 1);
     }
 	
-	public static TreeNode insertTreeNode(TreeNode treeNode, int val) {
+	static List<Integer> treeNodeToSortedList(TreeNode root, List<Integer> arr) {
+		if (root == null) {
+			return arr;
+		}
+		
+		treeNodeToSortedList(root.left, arr);
+		arr.add(root.val);
+		treeNodeToSortedList(root.right, arr);
+		
+		return arr;
+	}
+	
+	static TreeNode insertTreeNode(TreeNode treeNode, int val) {
 		if(treeNode == null) {
 			return new TreeNode(val);
 		}
@@ -43,17 +43,12 @@ public class KthSmallest {
 	public static void main(String...strings) {
 		// Input
 		Scanner scanner = new Scanner(System.in);
+		String[] inputs = InputUtil.inputArr(scanner.next());
 		int k = scanner.nextInt();
 		TreeNode root = null;
-		while(scanner.hasNext()) {
-			String input = scanner.next();
-			if("exit".equals(input)) {
-				break;
-			}
-			
-			if(!"null".equals(input)) {
-				int value = Integer.parseInt(input);
-				root = insertTreeNode(root, value);
+		for (int i = 0; i < inputs.length; i++) {
+			if (!"null".equals(inputs[i])) {
+				root = insertTreeNode(root, Integer.parseInt(inputs[i]));
 			}
 		}
 		
