@@ -73,7 +73,7 @@ No | Title | Difficulty | Related Topics | Solution |
 66 | Longest Palindromic Substring (Attempted) | Medium | String | [LongestPalindromicSubstring.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/string/LongestPalindromicSubstring.java) |
 67 | Longest Substring Without Repeating Characters | Medium | String | [LongestSubstring.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/string/LongestSubstring.java) |
 68 | Find First and Last Position of Element in Sorted Array | Medium | Array | [FirstAndLastIndices.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/array/FirstAndLastIndices.java) |
-69 | Count Primes (Attempted) | Easy | Math | [CountPrimes.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/easy/math/CountPrimes.java) |
+69 | Count Primes | Easy | Math | [CountPrimes.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/easy/math/CountPrimes.java) |
 70 | Minimum Size Subarray Sum | Medium | Array | [MinimumSizeSubarraySum.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/array/MinimumSizeSubarraySum.java) |
 71 | Word Search (TODO) | Medium | Array | [WordSearch.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/array/WordSearch.java) |
 72 | Intersection of Linked Lists | Easy | Linked list | [IntersectionOfTwoLinkedLists.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/easy/linkedlist/IntersectionOfTwoLinkedLists.java) |

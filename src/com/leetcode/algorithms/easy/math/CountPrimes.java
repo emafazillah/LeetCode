@@ -16,24 +16,36 @@ public class CountPrimes {
 	}
 	
 	static int countPrimes(int n) {
+		if (n < 2) {
+            return 0;
+        }
+        
 		int countPrimes = 0;
 		
-        for (int i = 2; i <= n; i++) {
-        	boolean isPrime = true;
-        	
-        	for (int j = 2; j <= i; j++) {
-        		if (j != i && i % j == 0) {
-        			isPrime = false;
-        			break;
-        		}
-        	}
-        	
-        	if (isPrime) {
+        for (int i = 2; i < n; i++) {
+        	if (isPrime(i)) {
         		++countPrimes;
         	}
         }
 		
         return countPrimes;
     }
+	
+	static boolean isPrime(int i) {
+		int j = 2;
+        while (j < i) {
+    		if (i % j == 0) {
+    			return false;
+    		}
+    		
+    		if (j * j >= i) {
+    			break;
+    		}
+            
+            j++;
+    	}
+        
+        return true;
+	}
 
 }
