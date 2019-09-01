@@ -1,9 +1,5 @@
 package com.leetcode.algorithms.easy.dynamicprogramming;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
 import java.util.Scanner;
 
 import com.leetcode.util.InputUtil;
@@ -23,38 +19,27 @@ public class HouseRobber {
 	}
 	
 	public static int rob(int[] nums) {
-		int length = nums.length;
-		
-		// For nums length lesser or equal than 2
-		if(length == 2) {
-			Arrays.sort(nums);
-			return nums[1];
-		} else if(length == 1) {
-			return nums[0];
-		} else if(length == 0) {
+		if (nums.length == 0) {
 			return 0;
-		}
-		
-		// Get sums and store it in array
-		List<Integer> results = new ArrayList<>();
-		int i = 0;
-		while(i < length) {
-			int diff = 2;
-			while(diff < length) {
-				int result = 0;
-				for(int j = i; j < length; j += diff) {
-					result += nums[j];
-				}
-				results.add(result);
-				++diff;
+		} else if (nums.length == 1) {
+			return nums[0];
+		} else if (nums.length == 2) {
+			return Math.max(nums[0], nums[1]);
+		} else if (nums.length == 3) {
+			return Math.max(nums[0] + nums[2], nums[1]);
+		} else {
+			int[] dp = new int[nums.length];
+			dp[0] = nums[0];
+			dp[1] = nums[1];
+			dp[2] = nums[0] + nums[2];
+			int max = Math.max(dp[1], dp[2]);
+			for (int i = 3; i < dp.length; i++) {
+				dp[i] = nums[i] + Math.max(dp[i - 2], dp[i - 3]);
+				max = Math.max(dp[i], max);
 			}
-			++i;
+			
+			return max;
 		}
-		
-		// Sort array
-		Collections.sort(results);
-		
-		return results.get(results.size() - 1);
     }
 
 }

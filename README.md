@@ -77,7 +77,7 @@ No | Title | Difficulty | Related Topics | Solution |
 70 | Minimum Size Subarray Sum | Medium | Array | [MinimumSizeSubarraySum.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/array/MinimumSizeSubarraySum.java) |
 71 | Word Search (TODO) | Medium | Array | [WordSearch.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/array/WordSearch.java) |
 72 | Intersection of Linked Lists | Easy | Linked list | [IntersectionOfTwoLinkedLists.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/easy/linkedlist/IntersectionOfTwoLinkedLists.java) |
-73 | House Robber (Attempted) | Easy |  Dynamic Programming | [HouseRobber.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/easy/dynamicprogramming/HouseRobber.java) |
+73 | House Robber | Easy |  Dynamic Programming | [HouseRobber.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/easy/dynamicprogramming/HouseRobber.java) |
 74 | Capacity To Ship Packages Within D Days (TODO) | Medium | Array | [CapacityShipWithinDays.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/array/CapacityShipWithinDays.java) |
 75 | Time Based Key-Value Store (TODO) | Medium | Binary Search | [TimeMap.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/array/TimeMap.java) |
 76 | Find Mode In Binary Search Tree (TODO) | Easy | Binary Search | [FindModeInBinarySearchTree.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/easy/binarysearch/FindModeInBinarySearchTree.java) |
