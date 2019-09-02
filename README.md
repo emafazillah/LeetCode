@@ -70,7 +70,7 @@ No | Title | Difficulty | Related Topics | Solution |
 63 | Capacity To Ship Packages Within D Days (TODO) | Medium | Binary Search | [CapacityShipWithinDays.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/binarysearch/CapacityShipWithinDays.java) |
 64 | Kth Smallest Element in a BST | Medium | Binary Search | [KthSmallest.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/binarysearch/KthSmallest.java) |
 65 | Time Based Key-Value Store | Medium | Binary Search | [TimeMap.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/binarysearch/TimeMap.java) |
-66 | Longest Palindromic Substring (Attempted) | Medium | String | [LongestPalindromicSubstring.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/string/LongestPalindromicSubstring.java) |
+66 | Longest Palindromic Substring | Medium | String | [LongestPalindromicSubstring.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/string/LongestPalindromicSubstring.java) |
 67 | Longest Substring Without Repeating Characters | Medium | String | [LongestSubstring.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/string/LongestSubstring.java) |
 68 | Find First and Last Position of Element in Sorted Array | Medium | Array | [FirstAndLastIndices.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/array/FirstAndLastIndices.java) |
 69 | Count Primes | Easy | Math | [CountPrimes.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/easy/math/CountPrimes.java) |
