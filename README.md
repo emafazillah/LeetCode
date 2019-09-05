@@ -84,3 +84,4 @@ No | Title | Difficulty | Related Topics | Solution |
 77 | Kth Largest Element in an Array | Medium | Heap | [KthLargestElementInAList.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/heap/KthLargestElementInAList.java) |
 78 | Remove Nth Node From End of List | Medium | Linked List | [RemoveNthNodeFromEndOfList.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/linkedlist/RemoveNthNodeFromEndOfList.java) |
 79 | Add Two Numbers | Medium | Linked List | [AddTwoNumbers.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/linkedlist/AddTwoNumbers.java) |
+80 | Remove Zero Sum Consecutive Nodes from Linked List | Medium | Linked List | [RemoveZeroSumSublists.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/linkedlist/RemoveZeroSumSublists.java) |
