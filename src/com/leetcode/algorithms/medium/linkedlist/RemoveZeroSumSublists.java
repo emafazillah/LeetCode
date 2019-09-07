@@ -1,7 +1,7 @@
 package com.leetcode.algorithms.medium.linkedlist;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 import com.leetcode.util.InputUtil;
@@ -23,9 +23,10 @@ public class RemoveZeroSumSublists {
 		
 		// Print output
 		while (listNode != null) {
-			System.out.println(listNode.val);
+			System.out.print(listNode.val + ",");
 			listNode = listNode.next;
 		}
+		System.out.println();
 		
 		scanner.close();
 	}
@@ -41,29 +42,35 @@ public class RemoveZeroSumSublists {
 	}
 	
 	static ListNode removeZeroSumSublists(ListNode head) {
-        ListNode listNode = head;
-		int sum = 0;
-		List<Integer> list = new ArrayList<>();
-		while (listNode != null) {
-			list.add(listNode.val);
-			sum += listNode.val;
-			if (sum == 0 && !list.isEmpty()) {
-				// Update head
-				for (int i = 0; i < list.size(); i++) {
-					// TODO
-				}
-				
-				// reset sum
-				sum = 0;
-				
-				// reset list
-				list.clear();
-			}
-			
-			listNode = listNode.next;
-		}
-		
-		return head;
+		Map<Integer, ListNode> map = new HashMap<>();
+        boolean isZeroSum = true; 
+        
+        while (isZeroSum) {
+        	isZeroSum = false;
+        	int sum = 0;
+        	ListNode temp = head;
+        	
+        	while (temp != null) {
+        		sum += temp.val;
+        		
+        		if (sum == 0) {
+        			head = temp.next;
+        			map.clear();
+        			isZeroSum = true;
+        			break;
+        		} else if (map.containsKey(sum)) {
+        			map.get(sum).next = temp.next;
+        			map.clear();
+        			isZeroSum = true;
+        			break;
+        		}
+        		
+        		map.put(sum, temp);
+        		temp = temp.next;
+        	}
+        }
+        
+        return head;
     }
 	
 }
