@@ -1,9 +1,6 @@
 package com.leetcode.algorithms.easy.string;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
-import java.util.TreeMap;
 
 public class BuddyStrings {
 	
@@ -19,21 +16,6 @@ public class BuddyStrings {
 		scanner.close();
 	}
 	
-	static TreeMap<Character, Integer> insertTreeMap(char[] chars) {
-		TreeMap<Character, Integer> map = new TreeMap<>();
-		
-		for (char c : chars) {
-			if (map.containsKey(c)) {
-				int count = map.get(c);
-				map.put(c, ++count);
-			} else {
-				map.put(c, 1);
-			}
-		}
-		
-		return map;
-	}
-	
 	static boolean buddyStrings(String A, String B) {
 		char[] charA = A.toCharArray();
         char[] charB = B.toCharArray();
@@ -41,29 +23,36 @@ public class BuddyStrings {
 		if (charA.length != charB.length) {
 			return false;	
 		} else if (A.equals(B)){
-			List<Character> list = new ArrayList<>();
-			
 			for (int i = 0; i < charA.length; i++) {
-				if (!list.contains(charA[i])) {
-					list.add(charA[i]);
+				for (int j = i + 1; j < charA.length; j++) {
+					if (charA[i] == charA[j]) {
+						return true;
+					}
 				}
 			}
 			
-			if (list.size() == 1) {
-				return true;
-			} else {
-				return false;
-			}
+			return false;
 		} else {
-			TreeMap<Character, Integer> mapA = insertTreeMap(charA);
-			TreeMap<Character, Integer> mapB = insertTreeMap(charB);
+			int countSwap = 0;
 			
-			if (!mapA.equals(mapB)) {
-				return false;
+			for (int i = 0; i < charA.length; i++) {
+				if (charA[i] != charB[i] && countSwap == 0) {
+					for (int j = i + 1; j < charA.length; j++) {
+						if (charA[j] == charB[i]) {
+							char temp = charA[j];
+							charA[j] = charA[i];
+							charA[i] = temp;
+							break;
+						}
+					}
+					++countSwap;
+				} else if (charA[i] != charB[i] && countSwap >= 1) {
+					return false;
+				}
 			}
+			
+			return true;
 		}
-		
-		return true;
     }
 
 }
