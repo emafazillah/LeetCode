@@ -85,4 +85,4 @@ No | Title | Difficulty | Related Topics | Solution |
 78 | Remove Nth Node From End of List | Medium | Linked List | [RemoveNthNodeFromEndOfList.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/linkedlist/RemoveNthNodeFromEndOfList.java) |
 79 | Add Two Numbers | Medium | Linked List | [AddTwoNumbers.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/linkedlist/AddTwoNumbers.java) |
 80 | Remove Zero Sum Consecutive Nodes from Linked List | Medium | Linked List | [RemoveZeroSumSublists.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/linkedlist/RemoveZeroSumSublists.java) |
-81 | Buddy Strings | Easy | String | []() |
+81 | Buddy Strings | Easy | String | [BuddyStrings.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/easy/string/BuddyStrings.java) |
