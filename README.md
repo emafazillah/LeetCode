@@ -75,14 +75,13 @@ No | Title | Difficulty | Related Topics | Solution |
 68 | Find First and Last Position of Element in Sorted Array | Medium | Array | [FirstAndLastIndices.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/array/FirstAndLastIndices.java) |
 69 | Count Primes | Easy | Math | [CountPrimes.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/easy/math/CountPrimes.java) |
 70 | Minimum Size Subarray Sum | Medium | Array | [MinimumSizeSubarraySum.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/array/MinimumSizeSubarraySum.java) |
-71 | Word Search (TODO) | Medium | Array | [WordSearch.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/array/WordSearch.java) |
+71 | Word Search | Medium | Array | [WordSearch.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/array/WordSearch.java) |
 72 | Intersection of Linked Lists | Easy | Linked list | [IntersectionOfTwoLinkedLists.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/easy/linkedlist/IntersectionOfTwoLinkedLists.java) |
 73 | House Robber | Easy |  Dynamic Programming | [HouseRobber.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/easy/dynamicprogramming/HouseRobber.java) |
-74 | Capacity To Ship Packages Within D Days (TODO) | Medium | Array | [CapacityShipWithinDays.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/array/CapacityShipWithinDays.java) |
-75 | Time Based Key-Value Store (TODO) | Medium | Binary Search | [TimeMap.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/array/TimeMap.java) |
-76 | Find Mode In Binary Search Tree (TODO) | Easy | Binary Search | [FindModeInBinarySearchTree.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/easy/binarysearch/FindModeInBinarySearchTree.java) |
-77 | Kth Largest Element in an Array | Medium | Heap | [KthLargestElementInAList.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/heap/KthLargestElementInAList.java) |
-78 | Remove Nth Node From End of List | Medium | Linked List | [RemoveNthNodeFromEndOfList.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/linkedlist/RemoveNthNodeFromEndOfList.java) |
-79 | Add Two Numbers | Medium | Linked List | [AddTwoNumbers.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/linkedlist/AddTwoNumbers.java) |
-80 | Remove Zero Sum Consecutive Nodes from Linked List | Medium | Linked List | [RemoveZeroSumSublists.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/linkedlist/RemoveZeroSumSublists.java) |
-81 | Buddy Strings | Easy | String | [BuddyStrings.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/easy/string/BuddyStrings.java) |
+74 | Time Based Key-Value Store (TODO) | Medium | Binary Search | [TimeMap.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/array/TimeMap.java) |
+75 | Find Mode In Binary Search Tree (TODO) | Easy | Binary Search | [FindModeInBinarySearchTree.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/easy/binarysearch/FindModeInBinarySearchTree.java) |
+76 | Kth Largest Element in an Array | Medium | Heap | [KthLargestElementInAList.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/heap/KthLargestElementInAList.java) |
+77 | Remove Nth Node From End of List | Medium | Linked List | [RemoveNthNodeFromEndOfList.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/linkedlist/RemoveNthNodeFromEndOfList.java) |
+78 | Add Two Numbers | Medium | Linked List | [AddTwoNumbers.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/linkedlist/AddTwoNumbers.java) |
+79 | Remove Zero Sum Consecutive Nodes from Linked List | Medium | Linked List | [RemoveZeroSumSublists.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/linkedlist/RemoveZeroSumSublists.java) |
+80 | Buddy Strings | Easy | String | [BuddyStrings.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/easy/string/BuddyStrings.java) |
