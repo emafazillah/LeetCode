@@ -87,3 +87,4 @@ No | Title | Difficulty | Related Topics | Solution |
 80 | Buddy Strings | Easy | String | [BuddyStrings.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/easy/string/BuddyStrings.java) |
 81 | Validate Binary Search Tree | Medium | Tree | [ValidateBinarySearchTree.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/tree/ValidateBinarySearchTree.java) |
 82 | Convert Sorted List to Binary Search Tree | Medium | Tree | [ConvertSortedListToBinarySearchTree.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/tree/ConvertSortedListToBinarySearchTree.java) |
+83 | Maximum Product of Three Numbers | Easy | Math | [MaximumProductOfThreeNumbers.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/easy/math/MaximumProductOfThreeNumbers.java) |
