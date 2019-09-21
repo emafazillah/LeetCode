@@ -90,3 +90,4 @@ No | Title | Difficulty | Related Topics | Solution |
 83 | Maximum Product of Three Numbers | Easy | Math | [MaximumProductOfThreeNumbers.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/easy/math/MaximumProductOfThreeNumbers.java) |
 84 | Sort Colors | Medium | Sort | [SortColors.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/sort/SortColors.java) |
 85 | Maximum Binary Tree | Medium | Tree | [MaximumBinaryTree.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/tree/MaximumBinaryTree.java) |
+86 | Merge Intervals | Medium | Sort | [MergeIntervals.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/sort/MergeIntervals.java) |
