@@ -1,22 +1,33 @@
 package com.leetcode.algorithms.medium.string;
 
-import java.util.Scanner;
-
 public class ReverseWordsInAString {
 	
 	public static void main(String...strings) {
-		Scanner scanner = new Scanner(System.in);
-		
-		System.out.println(scanner.next());
-		
-		scanner.close();
+		String s = "the sky is blue";
+		System.out.println(reverseWords(s));
 	}
 	
 	static String reverseWords(String s) {
-		char[] chars = s.toCharArray();
+		if (s.isEmpty()) {
+			return s;
+		}
 		
+		String[] arr = s.split(" ");
 		
-        return s;
+		if (arr.length == 1) {
+			return s.trim();
+		}
+		
+		StringBuilder sb = new StringBuilder();
+		int idx = arr.length - 1;
+		while (idx > -1) {
+			if (!arr[idx].isEmpty()) {
+				sb.append(arr[idx]).append(" ");
+			}
+			--idx;
+		}
+		
+        return sb.toString().trim();
     }
 
 }
