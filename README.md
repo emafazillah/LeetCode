@@ -91,3 +91,6 @@ No | Title | Difficulty | Related Topics | Solution |
 84 | Sort Colors | Medium | Sort | [SortColors.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/sort/SortColors.java) |
 85 | Maximum Binary Tree | Medium | Tree | [MaximumBinaryTree.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/tree/MaximumBinaryTree.java) |
 86 | Merge Intervals | Medium | Sort | [MergeIntervals.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/sort/MergeIntervals.java) |
+87 | Construct Binary Tree from Preorder and Inorder Traversal (TODO) | Medium | Tree | [ConstructBinaryTreeFromPreorderAndInorderTraversal.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/tree/ConstructBinaryTreeFromPreorderAndInorderTraversal.java) |
+88 | Reverse Words in a String (TODO) | Medium | String | [ReverseWordsInAString.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/string/ReverseWordsInAString.java) |
+89 | Group Anagrams | Medium | Hash Table | [GroupAnagrams.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/hashtable/GroupAnagrams.java) |
