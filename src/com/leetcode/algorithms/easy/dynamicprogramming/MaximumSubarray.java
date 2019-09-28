@@ -8,32 +8,22 @@ public class MaximumSubarray {
 	
 	static int maxSubArray(int[] nums) {
 		int maxCount = nums[0];
+		int count = 0;
 		for (int i = 0; i < nums.length; i++) {
-			int count = getMax(nums, i, maxCount);
+			count += nums[i];
+			
+			if (count <= 0) {
+				maxCount = Math.max(count, maxCount);
+				count = 0;
+				continue;
+			}
+			
 			if (count > maxCount) {
 				maxCount = count; 
 			}
 		}
         return maxCount;
     }
-	
-	static int getMax(int[] nums, int start, int max) {
-		int length = nums.length - start;
-		while (length > 0) {
-			int current = 0;
-			
-			for (int i = start; i < start + length; i++) {
-				current += nums[i];
-			}
-			
-			if (current > max) {
-				max = current;
-			}
-			
-			--length;
-		}
-		return max;
-	}
 	
 	public static void main(String...strings) {
 		// Input
