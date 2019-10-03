@@ -2,9 +2,8 @@ package com.leetcode.algorithms.medium.array;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
+import java.util.Collections;
 import java.util.List;
-import java.util.Map;
 import java.util.Scanner;
 
 import com.leetcode.util.InputUtil;
@@ -27,38 +26,43 @@ public class ThreeSum {
 	}
 	
 	static List<List<Integer>> threeSum(int[] nums) {
+		List<List<Integer>> listOfList = new ArrayList<>();
+		
+		if (nums.length < 3) {
+			return listOfList;
+		}
+		
 		Arrays.sort(nums);
 		
-        Map<List<Integer>, Integer> map = new HashMap<>();
-        for (int first = 0; first < nums.length; first++) {
-        	int sum = nums[first];
-        	int second = first + 1;
-        	while (second < nums.length) {
-            	int third = second + 1;
-            	while (third < nums.length) {
-            		sum += nums[second] + nums[third];
-            		if (sum == 0) {
-            			List<Integer> list = new ArrayList<>();
-            			list.add(nums[first]);
-            			list.add(nums[second]);
-            			list.add(nums[third]);
-            			map.put(list, 0);
-            			break;
-            		} else {
-            			sum = nums[first];
-            			++third;
-            		}
-            	}
-            	sum = nums[first];
-            	++second;
-        	}
-        }
+		for (int i = 0; i < nums.length; i++) {
+			int firstPointer = i + 1;
+			int secondPointer = nums.length - 1;
+			
+			while (firstPointer < secondPointer) {
+				int sum = nums[i] + nums[firstPointer] + nums[secondPointer]; 
+				
+				if (sum == 0) {
+					List<Integer> list = new ArrayList<>();
+					list.add(nums[i]);
+					list.add(nums[firstPointer]);
+					list.add(nums[secondPointer]);
+					
+					Collections.sort(list);
+					
+					if (!listOfList.contains(list)) {
+						listOfList.add(list);
+					}
+					
+					++firstPointer;
+				} else if (sum > 0) {
+					--secondPointer;
+				} else {
+					++firstPointer;
+				}
+			}
+		}
         
-        List<List<Integer>> result = new ArrayList<List<Integer>>();
-        for (Map.Entry<List<Integer>, Integer> entry : map.entrySet()) {
-        	result.add(entry.getKey());
-        }
-        return result;
+        return new ArrayList<List<Integer>>(listOfList);
     }
 
 }
