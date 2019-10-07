@@ -1,6 +1,5 @@
 package com.leetcode.algorithms.medium.tree;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -8,33 +7,34 @@ import java.util.Scanner;
 import com.leetcode.util.InputUtil;
 import com.leetcode.util.TreeNode;
 
-public class ConstructBinaryTreeFromPreorderAndInorderTraversal {
+public class ConstructBinaryTreeFromInorderPostorderTraversal {
 	
-	static int pre;
+	static int post;
 	
-	static TreeNode buildTree(int[] preorder, int[] inorder) {
+	static TreeNode buildTree(int[] inorder, int[] postorder) {
+		post = postorder.length - 1;
 	    Map<Integer,Integer> map = new HashMap<>();
 	    for (int i = 0; i < inorder.length; i++) {
 	    	map.put(inorder[i], i);
 	    }
 	    
-	    return tree(0, inorder.length-1, preorder, map);
+	    return tree(0, inorder.length - 1, postorder, map);
 	}
 	
-	static TreeNode tree(int start, int end, int[] preorder, Map<Integer,Integer> map){
+	static TreeNode tree(int start, int end, int[] postorder, Map<Integer,Integer> map){
 	    if (start > end) {
 	    	return null;
 	    }
 	    
-	    TreeNode root = new TreeNode(preorder[pre]);
+	    TreeNode root = new TreeNode(postorder[post]);
 	    
-	    int r = pre;
+	    int r = post;
 	    
-	    pre++;
+	    post--;
 	    
-	    root.left = tree(start, map.get(preorder[r]) - 1, preorder,map);
+	    root.right = tree(map.get(postorder[r]) + 1, end, postorder, map);
 	    
-	    root.right = tree(map.get(preorder[r]) + 1, end, preorder, map);
+	    root.left = tree(start, map.get(postorder[r]) - 1, postorder,map);
 	    
 	    return root;
 	}
@@ -42,11 +42,11 @@ public class ConstructBinaryTreeFromPreorderAndInorderTraversal {
 	public static void main(String...strings) {
 		// Input
 		Scanner scanner = new Scanner(System.in);
-		int[] preorder = InputUtil.integerArr(InputUtil.inputArr(scanner.next()));
 		int[] inorder = InputUtil.integerArr(InputUtil.inputArr(scanner.next()));
+		int[] postorder = InputUtil.integerArr(InputUtil.inputArr(scanner.next()));
 		
 		// Print output
-		TreeNode result = buildTree(preorder, inorder);
+		TreeNode result = buildTree(inorder, postorder);
 		
 		scanner.close();
 	}
