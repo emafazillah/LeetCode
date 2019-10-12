@@ -99,3 +99,4 @@ No | Title | Difficulty | Related Topics | Solution |
 92 | 3Sums | Medium | Array | [ThreeSum.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/array/ThreeSum.java) |
 93 | Construct Binary Tree from Preorder and Postorder Traversal | Medium | Tree | [ConstructBinaryTreeFromPreorderAndPostorderTraversal.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/tree/ConstructBinaryTreeFromPreorderAndPostorderTraversal.java) |
 94 | Construct Binary Tree from Inorder and Postorder Traversal | Medium | Tree | [ConstructBinaryTreeFromPreorderAndPostorderTraversal.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/tree/ConstructBinaryTreeFromPreorderAndPostorderTraversal.java) |
+95 | Symmetric Tree | Easy | Tree | [SymmetricTree.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/tree/SymmetricTree.java) |
