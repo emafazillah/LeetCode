@@ -3,7 +3,7 @@
 ### My Leetcode Submissions in Java [https://leetcode.com](https://leetcode.com)
 
 No | Title | Difficulty | Related Topics | Solution |
-:---:|:---:|:---:|:---:|:---:|
+:---|:---|:---|:---|:---|
 1 | Jewels and Stones | Easy | Divide and Conquer | [JewelsAndStones.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/easy/divideandconquer/JewelsAndStones.java) |
 2 | Range Sum of BST | Easy | Tree | [RangeSumOfBST.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/easy/tree/RangeSumOfBST.java) |
 3 | To Lower Case | Easy | String | [ToLowerCase.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/easy/string/ToLowerCase.java) |
@@ -103,3 +103,4 @@ No | Title | Difficulty | Related Topics | Solution |
 96 | H-Index | Medium | Array | [HIndex.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/array/HIndex.java) |
 97 | Valid Palindrome | Easy | String | [ValidPalindrome.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/easy/string/ValidPalindrome.java) |
 98 | Largest Number | Medium | Sort | [LargestNumber.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/medium/sort/LargestNumber.java) |
+99 | Number of 1 Bits | Easy | Bit Manipulation | [NumberOf1Bits.java](https://github.com/emafazillah/LeetCode/blob/master/src/com/leetcode/algorithms/easy/bitmanipulation/NumberOf1Bits.java) |
